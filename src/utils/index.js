@@ -1,4 +1,4 @@
-function removeSlashUrl(url = "") {
+function removeTrailingSlash(url = "") {
     let newUrl = url;
 
     if (url[url.length - 1] === '/'){
@@ -9,6 +9,6 @@ function removeSlashUrl(url = "") {
 }
 
 module.exports = {
-    removeSlashUrl,
+    removeTrailingSlash,
 }
 

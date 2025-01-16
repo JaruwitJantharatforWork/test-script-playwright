@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "D:\\HumanSoftAutomateTest\\test-with-playwright\\playwright.config.ts",
-    "rootDir": "D:/HumanSoftAutomateTest/test-with-playwright/src/tests",
+    "configFile": "D:\\HumanSoftAutomateTest\\test-script-playwright\\playwright.config.ts",
+    "rootDir": "D:/HumanSoftAutomateTest/test-script-playwright/src/tests",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -39,13 +39,13 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "D:/HumanSoftAutomateTest/test-with-playwright/test-results",
+        "outputDir": "D:/HumanSoftAutomateTest/test-script-playwright/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "chromium",
         "name": "chromium",
-        "testDir": "D:/HumanSoftAutomateTest/test-with-playwright/src/tests",
+        "testDir": "D:/HumanSoftAutomateTest/test-script-playwright/src/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -74,7 +74,7 @@
           "column": 6,
           "specs": [
             {
-              "title": "Filled Username and password",
+              "title": "TC_005: Not Fill Password",
               "ok": true,
               "tags": [],
               "tests": [
@@ -86,24 +86,28 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 0,
                       "status": "passed",
-                      "duration": 8969,
+                      "duration": 14021,
                       "errors": [],
-                      "stdout": [],
+                      "stdout": [
+                        {
+                          "text": "getPassword (error):  locator.inputValue: Error: Node is not an <input>, <textarea> or <select> element\nCall log:\n\u001b[2m  - waiting for locator('#mat-error-4')\u001b[22m\n\n    at LoginPage.getPassword (D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\pages\\login.page.js:84:71)\n    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\login.spec.js:43:32 {\n  [Symbol(step)]: {\n    stepId: 'pw:api@13',\n    location: {\n      file: 'D:\\\\HumanSoftAutomateTest\\\\test-script-playwright\\\\src\\\\pages\\\\login.page.js',\n      line: 84,\n      column: 71,\n      function: 'LoginPage.getPassword'\n    },\n    category: 'pw:api',\n    title: 'locator.inputValue(#mat-error-4)',\n    apiName: 'locator.inputValue',\n    params: { selector: '#mat-error-4', strict: true },\n    boxedStack: undefined,\n    steps: [],\n    complete: [Function: complete],\n    endWallTime: 1737027781793,\n    error: {\n      message: 'Error: locator.inputValue: Error: Node is not an <input>, <textarea> or <select> element\\n' +\n        'Call log:\\n' +\n        \"\\x1B[2m  - waiting for locator('#mat-error-4')\\x1B[22m\\n\",\n      stack: 'Error: locator.inputValue: Error: Node is not an <input>, <textarea> or <select> element\\n' +\n        'Call log:\\n' +\n        \"\\x1B[2m  - waiting for locator('#mat-error-4')\\x1B[22m\\n\" +\n        '\\n' +\n        '    at LoginPage.getPassword (D:\\\\HumanSoftAutomateTest\\\\test-script-playwright\\\\src\\\\pages\\\\login.page.js:84:71)\\n' +\n        '    at D:\\\\HumanSoftAutomateTest\\\\test-script-playwright\\\\src\\\\tests\\\\login.spec.js:43:32',\n      cause: undefined\n    }\n  }\n}\n"
+                        }
+                      ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-14T11:39:33.849Z",
+                      "startTime": "2025-01-16T11:42:48.098Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-with-playwright\\test-results\\login-Login-Page-Filled-Username-and-password-chromium\\test-finished-1.png"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-005-Not-Fill-Password-chromium\\test-finished-1.png"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-with-playwright\\test-results\\login-Login-Page-Filled-Username-and-password-chromium\\trace.zip"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-005-Not-Fill-Password-chromium\\trace.zip"
                         }
                       ]
                     }
@@ -111,10 +115,10 @@
                   "status": "expected"
                 }
               ],
-              "id": "badc1754af1944f68b2b-4aa4fc28fe075298e8a5",
+              "id": "badc1754af1944f68b2b-d45e196d4052a0073ea1",
               "file": "login.spec.js",
-              "line": 16,
-              "column": 9
+              "line": 40,
+              "column": 10
             }
           ]
         }
@@ -123,8 +127,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-14T11:39:32.715Z",
-    "duration": 10604.23900000006,
+    "startTime": "2025-01-16T11:42:47.707Z",
+    "duration": 15132.822,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

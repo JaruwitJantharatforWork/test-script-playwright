@@ -4,85 +4,191 @@ import { LoginPage } from "../pages/login.page";
 import { validUsers, problemUsers } from "../test-data/users";
 
 test.describe('Login Page', () => {
+
     test.beforeEach(async ({ loginPage }) => {
         await loginPage.goto();
     });
 
-    test('Choose company from select list', async ({ loginPage }) => {
+    test('TC_001: Choose company from select list', async ({ loginPage }) => {
         await loginPage.clickSelectCompany('OumforTest');
-        expect(loginPage.getSelectCompany()).not.toBeNull();
+        expect(await loginPage.getSelectCompany()).not.toBeNull();
+        expect(await loginPage.getSelectCompany()).toBe('OumforTest');
     });
 
-    test('Filled Username and password', async ({ loginPage }) => {
-        await loginPage.fillUserPassword('6501', '1234');
+    test('TC_002: Filled Username', async ({ loginPage }) => {
+        await loginPage.fillUsername('6501');
         expect(await loginPage.getUsername()).not.toBeNull();
-        expect(await loginPage.getPassword()).not.toBeNull();
+        expect(await loginPage.getUsername()).toBe('6501');
     });
+
+    test('TC_003: Not fill Username', async ({ loginPage }) => {
+        await loginPage.fillUsername('');
+        expect(await loginPage.getUsername()).toBe('');
+
+        await loginPage.clickInputPassword();
+
+        const alertMessage = await loginPage.getAlertUsername();
+        expect(alertMessage).toContain('กรุณาตรวจสอบชื่อผู้ใช้');  
+    });
+    
+    test('TC_004: Filled Password', async ({ loginPage }) => {
+        await loginPage.fillPassword('1234');
+        expect(await loginPage.getPassword()).not.toBeNull();
+        expect(await loginPage.getPassword()).toBe('1234');
+    });
+    
+    test.only('TC_005: Not Fill Password', async ({ loginPage }) => {
+        await loginPage.clickInputPassword();
+        // await loginPage.fillPassword('');
+        // expect(await loginPage.getPassword()).toBe('');
+        await loginPage.clickInputUsername();
+
+        const alertMessage = await loginPage.getAlertPassword();
+        expect(alertMessage).toContain('กรุณาตรวจสอบรหัสผ่าน');  
+    });
+
+    test('TC_006: Click show password button', async ({ loginPage }) => {
+    
+    });
+
+    test('TC_007: Selected and filled company, username and password data to login', async ({ loginPage }) => {
+        await loginPage.clickSelectCompany('OumforTest');
+        expect(await loginPage.getSelectCompany('OumforTest'));
+
+        await loginPage.fillUsername('6501');
+        expect(await loginPage.getUsername()).not.toBeNull();
+        expect(await loginPage.getUsername()).toBe('6501');
+        
+        await loginPage.fillPassword('1234');
+        expect(await loginPage.getPassword()).not.toBeNull();
+        expect(await loginPage.getPassword()).toBe('1234');
+
+        await loginPage.clickLogin();
+        expect (await loginPage.page.url()).toBe('https://hms.humansoft.co.th/welcome');
+    });
+
+    test('TC_008: Choose company from select list', async ({ loginPage }) => {
+        await loginPage.clickSelectCompany('OumforTest');
+        expect(await loginPage.getSelectCompany()).not.toBeNull();
+        expect(await loginPage.getSelectCompany()).toBe('OumforTest');
+    });
+
+    // test('TC_002: Filled Username', async ({ loginPage }) => {
+    //     await loginPage.fillUsername('6501');
+    //     expect(await loginPage.getUsername()).not.toBeNull();
+    //     expect(await loginPage.getUsername()).toBe('6501');
+    // });
+
+    // test.only('TC_003: Not fill Username', async ({ loginPage }) => {
+    //     await loginPage.fillUsername('');
+    //     expect(await loginPage.getUsername()).toBe('');
+
+    //     await loginPage.fillPassword('1234');
+    //     // expect(await loginPage.getPassword()).toBe('1234');
+    //     expect(await loginPage.getPassword()).not.toBeNull();
+
+    //     const message = await loginPage.getAlertUsername();
+    //     expect(message).toContain('กรุณาตรวจสอบชื่อผู้ใช้');  
+        
+    //     await loginPage.clickLogin();
+    //     expect(await loginPage.clickLogin()).toBeDisabled();
+    // });
+    
+    // test('TC_004: Filled Password', async ({ loginPage }) => {
+    //     await loginPage.fillPassword('1234');
+    //     expect(await loginPage.getPassword()).not.toBeNull();
+    //     expect(await loginPage.getPassword()).toBe('1234');
+    // });
+    
+    // test('TC_005: Not Filled Password', async ({ loginPage }) => {
+    //     await loginPage.fillPassword('');
+    //     expect(await loginPage.getPassword()).toBeNull();
+    //     expect(await loginPage.getAlertPassword()).toBeVisible();
+    //     expect(await loginPage.getAlertPassword()).toBe('กรุณาตรวจสอบรหัสผ่าน'); 
+    // });
+
+    // test('TC_006: Click show password button', async ({ loginPage }) => {
+    //     await loginPage.fillPassword('');
+    //     expect(await loginPage.getPassword()).toBeNull();
+    //     expect(await loginPage.getAlertPassword()).toBeVisible();
+    // });
+
+    // test('TC_007: Selected and filled company, username and password data to login', async ({ loginPage }) => {
+    //     await loginPage.clickSelectCompany('OumforTest');
+    //     expect(await loginPage.getSelectCompany('OumforTest'));
+
+    //     await loginPage.fillUsername('6501');
+    //     expect(await loginPage.getUsername()).not.toBeNull();
+    //     expect(await loginPage.getUsername()).not.toBe('6501');
+        
+    //     await loginPage.fillPassword('1234');
+    //     expect(await loginPage.getPassword()).not.toBeNull();
+    //     expect(await loginPage.getPassword()).not.toBe('1234');
+
+    //     await loginPage.clickLogin();
+    //     expect (await loginPage.page.url()).toBe('https://hms.humansoft.co.th/welcome');
+    // });
+
+    // test('TC_001: Choose company from select list', async ({ loginPage }) => {
+    //     await loginPage.clickSelectCompany('OumforTest');
+    //     expect(await loginPage.getSelectCompany()).not.toBeNull();
+    //     expect(await loginPage.getSelectCompany()).toBe('OumforTest');
+    // });
+
+    // test('TC_002: Filled Username', async ({ loginPage }) => {
+    //     await loginPage.fillUsername('6501');
+    //     expect(await loginPage.getUsername()).not.toBeNull();
+    //     expect(await loginPage.getUsername()).toBe('6501');
+    // });
+
+    // test.only('TC_003: Not fill Username', async ({ loginPage }) => {
+    //     await loginPage.fillUsername('');
+    //     expect(await loginPage.getUsername()).toBe('');
+
+    //     await loginPage.fillPassword('1234');
+    //     // expect(await loginPage.getPassword()).toBe('1234');
+    //     expect(await loginPage.getPassword()).not.toBeNull();
+
+    //     const message = await loginPage.getAlertUsername();
+    //     expect(message).toContain('กรุณาตรวจสอบชื่อผู้ใช้');  
+        
+    //     await loginPage.clickLogin();
+    //     expect(await loginPage.clickLogin()).toBeDisabled();
+    // });
+    
+    // test('TC_004: Filled Password', async ({ loginPage }) => {
+    //     await loginPage.fillPassword('1234');
+    //     expect(await loginPage.getPassword()).not.toBeNull();
+    //     expect(await loginPage.getPassword()).toBe('1234');
+    // });
+    
+    // test('TC_005: Not Filled Password', async ({ loginPage }) => {
+    //     await loginPage.fillPassword('');
+    //     expect(await loginPage.getPassword()).toBeNull();
+    //     expect(await loginPage.getAlertPassword()).toBeVisible();
+    //     expect(await loginPage.getAlertPassword()).toBe('กรุณาตรวจสอบรหัสผ่าน'); 
+    // });
+
+    // test('TC_006: Click show password button', async ({ loginPage }) => {
+    //     await loginPage.fillPassword('');
+    //     expect(await loginPage.getPassword()).toBeNull();
+    //     expect(await loginPage.getAlertPassword()).toBeVisible();
+    // });
+
+    // test('TC_007: Selected and filled company, username and password data to login', async ({ loginPage }) => {
+    //     await loginPage.clickSelectCompany('OumforTest');
+    //     expect(await loginPage.getSelectCompany('OumforTest'));
+
+    //     await loginPage.fillUsername('6501');
+    //     expect(await loginPage.getUsername()).not.toBeNull();
+    //     expect(await loginPage.getUsername()).not.toBe('6501');
+        
+    //     await loginPage.fillPassword('1234');
+    //     expect(await loginPage.getPassword()).not.toBeNull();
+    //     expect(await loginPage.getPassword()).not.toBe('1234');
+
+    //     await loginPage.clickLogin();
+    //     expect (await loginPage.page.url()).toBe('https://hms.humansoft.co.th/welcome');
+    // });
 });
 
-// test('Input fields should display as the data that was filled', async ({ loginPage }) => {
-//     await loginPage.fillUserPassword('testuser', 'password');
-//     expect(await loginPage.getUsername()).toBe('testuser');
-//     expect(await loginPage.getPassword()).toBe('password');
-// });
-
-// test('Should show an error message if log in without a username', async ({ loginPage }) => {
-//     await loginPage.fillUserPassword('', 'password'); 
-//     // await loginPage.clickLogin();
-
-//     // const message = await loginPage.getErrorMessage();
-//     // expect(message).toContain('is required');
-//     // expect(loginPage.isValidUrl()).toBe(true);
-
-//     loginPage.isValidUrl();
-// });
-
-// test('Should show an error message if log in without a password', async ({ loginPage }) => {
-//     await loginPage.fillUserPassword('usertest', ''); 
-//     await loginPage.clickLogin();
-
-//     const message = await loginPage.getErrorMessage();
-//     expect(message).toContain('is required');
-//     expect(loginPage.isValidUrl()).toBe(true);
-// });
-
-// test('Should show an error message if log in with both fields blank', async ({ loginPage }) => {
-//     await loginPage.fillUserPassword('', ''); 
-//     await loginPage.clickLogin();
-
-//     const message = await loginPage.getErrorMessage();
-//     expect(message).toContain('is required');
-//     expect(loginPage.isValidUrl()).toBe(true);
-// });
-
-// validUsers.forEach(({ username, password}) => {
-//     test(`Should logged in successfully with valid credentials: ${username}`, async ({ loginPage }) => {
-//         await loginPage.fillUserPassword(username, password);
-//         await loginPage.clickLogin();
-//         expect(await loginPage.getErrorMessage()).not.toContain('is required');
-//         expect(loginPage.isValidUrl()).toBe(false);
-//     });
-// });
-
-// test ('Selected and filled data should display as the data that was selected and filled', async ({ loginPage }) => {
-//     await loginPage.clickSelectCompany('OumforTest');
-//     await loginPage.fillUserPassword('6501', '1234');
-//     await loginPage.clickLogin();
-//     await loginPage.isValidUrl();
-
-//     expect(await loginPage.getSelectCompany()).toBe('OumforTest');
-//     expect(await loginPage.getUsername()).toBe('6501');
-//     expect(await loginPage.getPassword()).toBe('1234');
-// });
-
-
-// test ('filled only username should display as the data that was selected and filled', async ({ loginPage }) => {
-//     await loginPage.clickSelectCompany('OumforTest');
-//     await loginPage.fillUserPassword('6501', '1234');
-//     await loginPage.clickLogin();
-//     await loginPage.isValidUrl();
-
-//     expect(await loginPage.getSelectCompany()).toBe('OumforTest');
-//     expect(await loginPage.getUsername()).toBe('6501');
-//     expect(await loginPage.getPassword()).toBe('1234');
-// });
