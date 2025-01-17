@@ -70,12 +70,12 @@
         {
           "title": "Login Page",
           "file": "login.spec.js",
-          "line": 6,
+          "line": 7,
           "column": 6,
           "specs": [
             {
-              "title": "TC_005: Not Fill Password",
-              "ok": true,
+              "title": "TC_006: Click show password",
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -87,37 +87,57 @@
                   "results": [
                     {
                       "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 14021,
-                      "errors": [],
-                      "stdout": [
+                      "status": "failed",
+                      "duration": 6417,
+                      "error": {
+                        "message": "Error: toHaveAttribute can be only used with Locator object",
+                        "stack": "Error: toHaveAttribute can be only used with Locator object\n    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\login.spec.js:135:37",
+                        "location": {
+                          "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\login.spec.js",
+                          "column": 37,
+                          "line": 135
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 133 |\u001b[39m\n \u001b[90m 134 |\u001b[39m         \u001b[90m// ตรวจสอบว่าเริ่มต้น type เป็น \"password\"\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 135 |\u001b[39m         \u001b[36mawait\u001b[39m expect(passwordInput)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'type'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'password'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 136 |\u001b[39m\n \u001b[90m 137 |\u001b[39m         \u001b[90m// คลิกปุ่ม Show/Hide Password\u001b[39m\n \u001b[90m 138 |\u001b[39m         \u001b[36mawait\u001b[39m toggleButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
                         {
-                          "text": "getPassword (error):  locator.inputValue: Error: Node is not an <input>, <textarea> or <select> element\nCall log:\n\u001b[2m  - waiting for locator('#mat-error-4')\u001b[22m\n\n    at LoginPage.getPassword (D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\pages\\login.page.js:84:71)\n    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\login.spec.js:43:32 {\n  [Symbol(step)]: {\n    stepId: 'pw:api@13',\n    location: {\n      file: 'D:\\\\HumanSoftAutomateTest\\\\test-script-playwright\\\\src\\\\pages\\\\login.page.js',\n      line: 84,\n      column: 71,\n      function: 'LoginPage.getPassword'\n    },\n    category: 'pw:api',\n    title: 'locator.inputValue(#mat-error-4)',\n    apiName: 'locator.inputValue',\n    params: { selector: '#mat-error-4', strict: true },\n    boxedStack: undefined,\n    steps: [],\n    complete: [Function: complete],\n    endWallTime: 1737027781793,\n    error: {\n      message: 'Error: locator.inputValue: Error: Node is not an <input>, <textarea> or <select> element\\n' +\n        'Call log:\\n' +\n        \"\\x1B[2m  - waiting for locator('#mat-error-4')\\x1B[22m\\n\",\n      stack: 'Error: locator.inputValue: Error: Node is not an <input>, <textarea> or <select> element\\n' +\n        'Call log:\\n' +\n        \"\\x1B[2m  - waiting for locator('#mat-error-4')\\x1B[22m\\n\" +\n        '\\n' +\n        '    at LoginPage.getPassword (D:\\\\HumanSoftAutomateTest\\\\test-script-playwright\\\\src\\\\pages\\\\login.page.js:84:71)\\n' +\n        '    at D:\\\\HumanSoftAutomateTest\\\\test-script-playwright\\\\src\\\\tests\\\\login.spec.js:43:32',\n      cause: undefined\n    }\n  }\n}\n"
+                          "location": {
+                            "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\login.spec.js",
+                            "column": 37,
+                            "line": 135
+                          },
+                          "message": "Error: toHaveAttribute can be only used with Locator object\n\n\u001b[0m \u001b[90m 133 |\u001b[39m\n \u001b[90m 134 |\u001b[39m         \u001b[90m// ตรวจสอบว่าเริ่มต้น type เป็น \"password\"\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 135 |\u001b[39m         \u001b[36mawait\u001b[39m expect(passwordInput)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'type'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'password'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 136 |\u001b[39m\n \u001b[90m 137 |\u001b[39m         \u001b[90m// คลิกปุ่ม Show/Hide Password\u001b[39m\n \u001b[90m 138 |\u001b[39m         \u001b[36mawait\u001b[39m toggleButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\login.spec.js:135:37\u001b[22m"
                         }
                       ],
+                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-16T11:42:48.098Z",
+                      "startTime": "2025-01-17T09:35:43.732Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-005-Not-Fill-Password-chromium\\test-finished-1.png"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-006-Click-show-password-chromium\\test-failed-1.png"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-005-Not-Fill-Password-chromium\\trace.zip"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-006-Click-show-password-chromium\\trace.zip"
                         }
-                      ]
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\login.spec.js",
+                        "column": 37,
+                        "line": 135
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
-              "id": "badc1754af1944f68b2b-d45e196d4052a0073ea1",
+              "id": "badc1754af1944f68b2b-77a4ce9c95d9fd35d73d",
               "file": "login.spec.js",
-              "line": 40,
+              "line": 121,
               "column": 10
             }
           ]
@@ -127,11 +147,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-16T11:42:47.707Z",
-    "duration": 15132.822,
-    "expected": 1,
+    "startTime": "2025-01-17T09:35:43.301Z",
+    "duration": 7504.2789999999995,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
