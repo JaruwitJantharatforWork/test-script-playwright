@@ -3,15 +3,26 @@ import { removeTrailingSlash } from "../utils";
 
 export class LoginPage {
     baseURL = "https://hms.humansoft.co.th/auth/login";
+    ccsURL = "https://ccs.humansoft.co.th/auth/login"
 
     locatorCompany  = '#mat-select-0';
+    locatorCompanyAtResetpassword  = '#mat-select-1';
     locatorUsername = '[formcontrolname="email"]';
+    locatorUsernameAtResetPassword = '#mat-input-4';
     locatorPassword = '[formcontrolname="password"]';
     locatorLoginButton = '[aria-label="LOG IN"]';
     locatorAlertUsername = '#mat-error-3';
     locatorAlertPassword = '#mat-error-4'; 
-    locatorLoginFailModal = '.swal2-popup.swal2-icon-error';
+    locatorFailModal = '.swal2-popup.swal2-icon-error';
+    locatorSuccessModal = '.swal2-popup.swal2-icon-success';
     locateConfirmModalButton = '.swal2-confirm.swal2-styled';
+    locatorCCS = '[aria-label="go to CCS"]';
+    locatorForgotPassword = 'a.ng-tns-c485-2';
+    locatorResetPasswordModal = '#login-modal-component';
+    locatorResetPasswordButton = '[aria-label="reset"]';
+    locatorEmailVertifyButton = '[nzvalue="email"]';
+    locatorPhoneVertifyButton = '[nzvalue="mobilephone"]';
+    locatorOtpModal = '#login-modal-component';
 
     /**
     * @param {Page} page
@@ -26,6 +37,10 @@ export class LoginPage {
     async goto() {
         await this.page.goto(this.baseURL);
     };
+
+    async gotoCCS() {
+        await this.page.goto(this.ccsURL);
+    };    
     
     /* Locator */
 
@@ -36,20 +51,56 @@ export class LoginPage {
     async locatePassword() {
         return this.page.locator(this.locatorPassword);
     };
+
+    async locateShowPassword() {
+        return await this.page.locator('mat-icon', { hasText: 'visibility_off' });
+    }
     
     async locateLoginButton() {
         return this.page.locator(this.locatorLoginButton);
     };
     
     async locateLoginFailModal() {
-        return this.page.locator(this.locatorLoginFailModal);
+        return this.page.locator(this.locatorFailModal);
     };
+    
+    async locateResetPasswordFailModal() {
+        return this.page.locator(this.locatorFailModal);
+    };
+
+    async locateResetPasswordSuccessModal() {
+        return this.page.locator(this.locatorSuccessModal);
+    };
+
+    async locateResetPasswordModal() {
+        return this.page.locator(this.locatorResetPasswordModal);
+    };
+
+    async locateResetButton() {
+        return this.page.locator(this.locatorResetPasswordButton);
+    }
+
+    async locateOtpModal() {
+        return this.page.locator(this.locatorOtpModal);
+    };
+
+    async locateCCS() {
+        return await this.page.locator(this.locatorCCS);
+    };    
+
 
     /* Input */
 
     async clickSelectCompany(company) {
         await this.page.waitForSelector(this.locatorCompany);
         await this.page.locator(this.locatorCompany).click();
+        await this.page.waitForSelector('.cdk-overlay-pane mat-option');
+        await this.page.locator(`.cdk-overlay-pane .mat-option-text >> text=${company}`).click();
+    };
+    
+    async clickSelectCompanyAtResetPassword(company) {
+        await this.page.waitForSelector(this.locatorCompanyAtResetpassword);
+        await this.page.locator(this.locatorCompanyAtResetpassword).click();
         await this.page.waitForSelector('.cdk-overlay-pane mat-option');
         await this.page.locator(`.cdk-overlay-pane .mat-option-text >> text=${company}`).click();
     };
@@ -60,6 +111,10 @@ export class LoginPage {
     
     async fillPassword(password) {
         await this.page.locator(this.locatorPassword).fill(password ?? '');
+    };
+
+    async fillUsernameAtResetPassword(username) {
+        await this.page.locator(this.locatorUsernameAtResetPassword).fill(username ?? '');
     };
     
     async clickLogin() {
@@ -76,7 +131,12 @@ export class LoginPage {
 
     async clickShowPassword() {
         await this.page.waitForSelector('mat-icon', { state: 'visible' });
-        await this.page.locator('mat-icon', { hasText: 'visibility_off' });
+        await this.page.locator('mat-icon', { hasText: 'visibility_off' }).click();
+    };
+    
+    async clickHidePassword() {
+        await this.page.waitForSelector('mat-icon', { state: 'visible' });
+        await this.page.locator('mat-icon', { hasText: 'visibility' }).click();
     };
 
     async clickForgetPassword() {
@@ -86,6 +146,25 @@ export class LoginPage {
     async clickConfirmModal() {
         await this.page.locator(this.locateConfirmModalButton).click();
     };    
+
+    async clicktoCCS() {
+        await this.page.locator(this.locatorCCS).click();
+    };  
+
+    async clickForgetPassword() {
+        await this.page.locator(this.locatorForgotPassword).click();
+    };
+
+    async clickResetPassword() {
+        await this.page.locator(this.locatorResetPasswordButton).click();
+    };
+
+    async clickEmailVertifyButton() {
+        await this.page.locator(this.locatorEmailVertifyButton).click();
+    };
+    async clickPhoneVertifyButton() {
+        await this.page.locator(this.locatorPhoneVertifyButton).click();
+    };
 
     /* Get Data */
 
@@ -99,9 +178,29 @@ export class LoginPage {
         return"";
     };
     
+    async getSelectCompanyAtResetPassword() {
+        try {
+            return await this.page.locator(this.locatorCompanyAtResetpassword).textContent();
+        } catch (error) {
+            console.log('getSelectCompanyAtResetPassword (error): ', error)
+        }
+        
+        return"";
+    };
+    
     async getUsername() {
         try {
             return await this.page.locator(this.locatorUsername).inputValue();
+        } catch (error) {
+            console.log('getUsername (error): ', error)
+        }
+
+        return"";
+    };
+    
+    async getUsernameAtResetPassword() {
+        try {
+            return await this.page.locator(this.locatorUsernameAtResetPassword).inputValue();
         } catch (error) {
             console.log('getUsername (error): ', error)
         }
@@ -141,13 +240,38 @@ export class LoginPage {
 
     async getAlertLoginFailModal() {
         try {
-            return await this.page.locator(this.locatorLoginFailModal).textContent() || "";            
+            return await this.page.locator(this.locatorFailModal).textContent() || "";            
         } catch (error) {
             console.log('getAlertLoginFailModal (error): ', error)
         }
 
         return"";
     };
+    
+    async getAlertResetPasswordFailModal() {
+        try {
+            return await this.page.locator(this.locatorFailModal).textContent() || "";            
+        } catch (error) {
+            console.log('getAlertLoginFailModal (error): ', error)
+        }
+
+        return"";
+    };
+    
+    async getAlertResetPasswordSuccessModal() {
+        try {
+            return await this.page.locator(this.locatorSuccessModal).textContent() || "";            
+        } catch (error) {
+            console.log('getAlertLoginFailModal (error): ', error)
+        }
+
+        return"";
+    };
+
+    async getClickShowPassword() {
+        const attributeValue = await this.page.locator(this.locatorPassword).getAttribute('type'); 
+        return attributeValue;
+    }
 
     async getWelcomeUrl() {
         // const currentUrl = this.page.url();
@@ -159,8 +283,15 @@ export class LoginPage {
         // await this.page.waitForURL(url => url !== currentUrl);  
         // const newUrl = await this.page.url(); 
         // return newUrl;
-
         
+        const currentUrl = this.page.url();  // ดึง current URL เป็น string
+        // รอให้ URL เปลี่ยนแปลงและมีคำว่า "welcome"
+        await this.page.waitForURL(url => /welcome/.test(url.href) && url.href !== currentUrl, { timeout: 5000 });
+        const newUrl = await this.page.url(); 
+        return newUrl;
+    };
+
+    async getCCSUrl() {
         const currentUrl = this.page.url();  // ดึง current URL เป็น string
         // รอให้ URL เปลี่ยนแปลงและมีคำว่า "welcome"
         await this.page.waitForURL(url => /welcome/.test(url.href) && url.href !== currentUrl, { timeout: 5000 });

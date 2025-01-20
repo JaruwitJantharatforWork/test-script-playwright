@@ -3,6 +3,7 @@ import { test } from "../pages/base";
 import { LoginPage } from "../pages/login.page";
 import { validUsers, problemUsers } from "../test-data/users";
 import { log } from "console";
+import exp from "constants";
 
 test.describe('Login Page', () => {
     
@@ -15,13 +16,14 @@ test.describe('Login Page', () => {
         expect(loginButton).toBeDisabled();
     
         await loginPage.clickSelectCompany('OumforTest');
-        expect(await loginPage.getSelectCompany('OumforTest'));
+        expect(await loginPage.getSelectCompany()).not.toBeNull();
+        expect(await loginPage.getSelectCompany()).toBe('OumforTest');
     
-        await loginPage.fillUsername(null);
-        expect(await loginPage.getUsername()).toBe('');
+        // await loginPage.fillUsername(null);
+        // expect(await loginPage.getUsername()).toBe('');
         
-        await loginPage.fillPassword(null);
-        expect(await loginPage.getPassword()).toBe('');
+        // await loginPage.fillPassword(null);
+        // expect(await loginPage.getPassword()).toBe('');
     
         expect(loginButton).toBeDisabled();
     
@@ -33,7 +35,8 @@ test.describe('Login Page', () => {
         expect(loginButton).toBeDisabled();
 
         await loginPage.clickSelectCompany('OumforTest');
-        expect(await loginPage.getSelectCompany('OumforTest'));
+        expect(await loginPage.getSelectCompany()).not.toBeNull();
+        expect(await loginPage.getSelectCompany()).toBe('OumforTest');
     
         await loginPage.fillUsername(null);
         expect(await loginPage.getUsername()).toBe('');
@@ -55,7 +58,8 @@ test.describe('Login Page', () => {
         expect(loginButton).toBeDisabled();
         
         await loginPage.clickSelectCompany('OumforTest');
-        expect(await loginPage.getSelectCompany('OumforTest'));
+        expect(await loginPage.getSelectCompany()).not.toBeNull();
+        expect(await loginPage.getSelectCompany()).toBe('OumforTest');
         
         await loginPage.fillPassword(null);
         expect(await loginPage.getPassword()).toBe('');
@@ -77,7 +81,8 @@ test.describe('Login Page', () => {
         // expect(loginButton).toBeDisabled();
         
         await loginPage.clickSelectCompany('OumforTest');
-        expect(await loginPage.getSelectCompany('OumforTest'));
+        expect(await loginPage.getSelectCompany()).not.toBeNull();
+        expect(await loginPage.getSelectCompany()).toBe('OumforTest');
         
         await loginPage.fillUsername('6501');
         expect(await loginPage.getUsername()).not.toBeNull();
@@ -103,7 +108,8 @@ test.describe('Login Page', () => {
 
     test('TC_005: Login successfully with valid credentials', async ({ loginPage }) => {
         await loginPage.clickSelectCompany('OumforTest');
-        expect(await loginPage.getSelectCompany('OumforTest'));
+        expect(await loginPage.getSelectCompany()).not.toBeNull();
+        expect(await loginPage.getSelectCompany()).toBe('OumforTest');
         
         await loginPage.fillUsername('6501');
         expect(await loginPage.getUsername()).not.toBeNull();
@@ -118,185 +124,214 @@ test.describe('Login Page', () => {
         expect (await loginPage.page.url()).toBe('https://hms.humansoft.co.th/welcome');
     });
     
-    test.only('TC_006: Click show password', async ({ loginPage }) => {
+    test('TC_006: Click show password', async ({ loginPage }) => {
         await loginPage.fillPassword('1234');
         expect(await loginPage.getPassword()).not.toBeNull();
         expect(await loginPage.getPassword()).toBe('1234');
+        expect(await loginPage.getClickShowPassword()).toBe('password');
+
+        await loginPage.clickShowPassword(); 
+        expect(await loginPage.getClickShowPassword()).toBe('text');
         
-        // await loginPage.clickShowPassword();
-        // const passwordInput = await loginPage.clickInputPassword();
-        // expect(await expect(passwordInput).toHaveAttribute('type', 'text'));
-
-        // ดึง input และปุ่มไอคอน show/hide
-        const passwordInput = await loginPage.getPassword();
-        const toggleButton = await loginPage.clickShowPassword();
-
-        // ตรวจสอบว่าเริ่มต้น type เป็น "password"
-        await expect(passwordInput).toHaveAttribute('type', 'password');
-
-        // คลิกปุ่ม Show/Hide Password
-        await toggleButton.click();
-
-        // ตรวจสอบว่า type เปลี่ยนเป็น "text"
-        await expect(passwordInput).toHaveAttribute('type', 'text');
-
-        // คลิกอีกครั้งเพื่อซ่อนรหัสผ่าน
-        await toggleButton.click();
-
-        // ตรวจสอบว่า type กลับเป็น "password"
-        await expect(passwordInput).toHaveAttribute('type', 'password');
+        await loginPage.clickHidePassword();
+        expect(await loginPage.getClickShowPassword()).toBe('password');
     });
     
-    // test('TC_006: Not Fill Password', async ({ loginPage }) => {
-    //     await loginPage.clickSelectCompany('OumforTest');
-    //     expect(await loginPage.getSelectCompany()).not.toBeNull();
-    //     expect(await loginPage.getSelectCompany()).toBe('OumforTest');
-
-    //     await loginPage.fillUsername('6501');
-    //     expect(await loginPage.getUsername()).not.toBeNull();
-    //     expect(await loginPage.getUsername()).toBe('6501');
-        
-    //     await loginPage.fillPassword('');
-    //     expect(await loginPage.getPassword()).toBe('');
-    //     await loginPage.clickInputUsername();
-        
-    //     const alertMessage = await loginPage.getAlertPassword();
-    //     expect(alertMessage).toContain('กรุณาตรวจสอบรหัสผ่าน');  
-    // });
-
-    // test('TC_001: Choose company from select list', async ({ loginPage }) => {
-        //     await loginPage.clickSelectCompany('OumforTest');
-        //     expect(await loginPage.getSelectCompany()).not.toBeNull();
-    //     expect(await loginPage.getSelectCompany()).toBe('OumforTest');
-    // });
-    
-    // test('TC_002: Filled Username', async ({ loginPage }) => {
-    //     await loginPage.fillUsername('6501');
-    //     expect(await loginPage.getUsername()).not.toBeNull();
-    //     expect(await loginPage.getUsername()).toBe('6501');
-    // });
-    
-    // test('TC_004: Filled Password', async ({ loginPage }) => {
-    //     await loginPage.fillPassword('1234');
-    //     expect(await loginPage.getPassword()).not.toBeNull();
-    //     expect(await loginPage.getPassword()).toBe('1234');
-    // });
-    
-    
-
-
-
-    test('TC_010 Selected company without username and password data to login', async ({ loginPage }) => {
+    test('TC_007: Click forgot password', async ({ loginPage }) => {
         await loginPage.clickSelectCompany('OumforTest');
-        expect(await loginPage.getSelectCompany('OumforTest'));
+        expect(await loginPage.getSelectCompany()).not.toBeNull();
+        expect(await loginPage.getSelectCompany()).toBe('OumforTest');
 
-        await loginPage.fillUsername('');
-        expect(await loginPage.getUsername()).toBe('');
-        
-        await loginPage.fillPassword('');
-        expect(await loginPage.getPassword()).toBe('');
-
-        // await loginPage.clickLogin();
-        // const isDisabled = (await loginPage.clickLogin()).isDisabled();
-        // expect (isDisabled).toBe(true);
-
-        expect (await loginPage.page.url()).toBe('https://hms.humansoft.co.th/auth/login');
-    });
-    
-    test('TC_011: Click forget password', async ({ loginPage }) => {
         await loginPage.clickForgetPassword();
-        await page.locator('div').filter({ hasText: /^คืนค่ารหัสผ่าน$/ }).first().click();
+        expect (await loginPage.locateResetPasswordModal()).toBeVisible();
+
+        const getCompanySelectionButton = await loginPage.getSelectCompanyAtResetPassword();
+        expect(getCompanySelectionButton).not.toBeNull();
+        expect(getCompanySelectionButton).toBe('OumforTest');
+        
+        expect (await loginPage.getSelectCompanyAtResetPassword() === await loginPage.getSelectCompany()).toBe(true);
     });
-    
-    // test('TC_005: Not Filled Password', async ({ loginPage }) => {
-    //     await loginPage.fillPassword('');
-    //     expect(await loginPage.getPassword()).toBeNull();
-    //     expect(await loginPage.getAlertPassword()).toBeVisible();
-    //     expect(await loginPage.getAlertPassword()).toBe('กรุณาตรวจสอบรหัสผ่าน'); 
-    // });
 
-    // test('TC_006: Click show password button', async ({ loginPage }) => {
-    //     await loginPage.fillPassword('');
-    //     expect(await loginPage.getPassword()).toBeNull();
-    //     expect(await loginPage.getAlertPassword()).toBeVisible();
-    // });
-
-    // test('TC_007: Selected and filled company, username and password data to login', async ({ loginPage }) => {
-    //     await loginPage.clickSelectCompany('OumforTest');
-    //     expect(await loginPage.getSelectCompany('OumforTest'));
-
-    //     await loginPage.fillUsername('6501');
-    //     expect(await loginPage.getUsername()).not.toBeNull();
-    //     expect(await loginPage.getUsername()).not.toBe('6501');
+    test('TC_008: Modal reset password Input fields without username', async ({ loginPage }) => {
+        await loginPage.clickForgetPassword();
+        expect (await loginPage.locateResetPasswordModal()).toBeVisible();
         
-    //     await loginPage.fillPassword('1234');
-    //     expect(await loginPage.getPassword()).not.toBeNull();
-    //     expect(await loginPage.getPassword()).not.toBe('1234');
-
-    //     await loginPage.clickLogin();
-    //     expect (await loginPage.page.url()).toBe('https://hms.humansoft.co.th/welcome');
-    // });
-
-    // test('TC_001: Choose company from select list', async ({ loginPage }) => {
-    //     await loginPage.clickSelectCompany('OumforTest');
-    //     expect(await loginPage.getSelectCompany()).not.toBeNull();
-    //     expect(await loginPage.getSelectCompany()).toBe('OumforTest');
-    // });
-
-    // test('TC_002: Filled Username', async ({ loginPage }) => {
-    //     await loginPage.fillUsername('6501');
-    //     expect(await loginPage.getUsername()).not.toBeNull();
-    //     expect(await loginPage.getUsername()).toBe('6501');
-    // });
-
-    // test.only('TC_003: Not fill Username', async ({ loginPage }) => {
-    //     await loginPage.fillUsername('');
-    //     expect(await loginPage.getUsername()).toBe('');
-
-    //     await loginPage.fillPassword('1234');
-    //     // expect(await loginPage.getPassword()).toBe('1234');
-    //     expect(await loginPage.getPassword()).not.toBeNull();
-
-    //     const message = await loginPage.getAlertUsername();
-    //     expect(message).toContain('กรุณาตรวจสอบชื่อผู้ใช้');  
+        const resetButton = await loginPage.locateResetButton();
+        expect(resetButton).toBeDisabled();
+    });
+   
+    test('TC_009: Modal reset password Input fields with invalid username select email', async ({ loginPage }) => {
+        await loginPage.clickForgetPassword();
+        expect (await loginPage.locateResetPasswordModal()).toBeVisible();
         
-    //     await loginPage.clickLogin();
-    //     expect(await loginPage.clickLogin()).toBeDisabled();
-    // });
-    
-    // test('TC_004: Filled Password', async ({ loginPage }) => {
-    //     await loginPage.fillPassword('1234');
-    //     expect(await loginPage.getPassword()).not.toBeNull();
-    //     expect(await loginPage.getPassword()).toBe('1234');
-    // });
-    
-    // test('TC_005: Not Filled Password', async ({ loginPage }) => {
-    //     await loginPage.fillPassword('');
-    //     expect(await loginPage.getPassword()).toBeNull();
-    //     expect(await loginPage.getAlertPassword()).toBeVisible();
-    //     expect(await loginPage.getAlertPassword()).toBe('กรุณาตรวจสอบรหัสผ่าน'); 
-    // });
-
-    // test('TC_006: Click show password button', async ({ loginPage }) => {
-    //     await loginPage.fillPassword('');
-    //     expect(await loginPage.getPassword()).toBeNull();
-    //     expect(await loginPage.getAlertPassword()).toBeVisible();
-    // });
-
-    // test('TC_007: Selected and filled company, username and password data to login', async ({ loginPage }) => {
-    //     await loginPage.clickSelectCompany('OumforTest');
-    //     expect(await loginPage.getSelectCompany('OumforTest'));
-
-    //     await loginPage.fillUsername('6501');
-    //     expect(await loginPage.getUsername()).not.toBeNull();
-    //     expect(await loginPage.getUsername()).not.toBe('6501');
+        const resetButton = await loginPage.locateResetButton();
+        expect(resetButton).toBeDisabled();
         
-    //     await loginPage.fillPassword('1234');
-    //     expect(await loginPage.getPassword()).not.toBeNull();
-    //     expect(await loginPage.getPassword()).not.toBe('1234');
+        await loginPage.clickSelectCompanyAtResetPassword('OumforTest');
+        expect(await loginPage.getSelectCompanyAtResetPassword()).not.toBeNull();
+        expect(await loginPage.getSelectCompanyAtResetPassword()).toBe('OumforTest');
 
-    //     await loginPage.clickLogin();
-    //     expect (await loginPage.page.url()).toBe('https://hms.humansoft.co.th/welcome');
-    // });
+        await loginPage.fillUsernameAtResetPassword('1111');
+        expect(await loginPage.getUsernameAtResetPassword()).not.toBeNull();
+        expect(await loginPage.getUsernameAtResetPassword()).toBe('1111');
+
+        expect(resetButton).toBeEnabled();
+
+        // await loginPage.clickEmailVertifyButton();
+
+        await loginPage.clickResetPassword();
+
+        expect(await loginPage.locateResetPasswordFailModal()).toBeVisible();
+
+        const alertResetPasswordFailMessage = await loginPage.getAlertResetPasswordFailModal();
+        expect(alertResetPasswordFailMessage).toContain('ผิดพลาด×ไม่สามารถคืนค่ารหัสผ่านได้');
+
+        await loginPage.clickConfirmModal();
+
+    });
+
+    test('TC_010: Modal reset password Input fields with invalid username select phone', async ({ loginPage }) => {
+        await loginPage.clickForgetPassword();
+        expect (await loginPage.locateResetPasswordModal()).toBeVisible();
+
+        const resetButton = await loginPage.locateResetButton();
+        expect(resetButton).toBeDisabled();
+        
+        await loginPage.clickSelectCompanyAtResetPassword('OumforTest');
+        expect(await loginPage.getSelectCompanyAtResetPassword()).not.toBeNull();
+        expect(await loginPage.getSelectCompanyAtResetPassword()).toBe('OumforTest');
+
+        await loginPage.fillUsernameAtResetPassword('1111');
+        expect(await loginPage.getUsernameAtResetPassword()).not.toBeNull();
+        expect(await loginPage.getUsernameAtResetPassword()).toBe('1111');
+        
+        expect(resetButton).toBeEnabled();
+
+        await loginPage.clickPhoneVertifyButton();
+
+        await loginPage.clickResetPassword();
+
+        expect(await loginPage.locateResetPasswordFailModal()).toBeVisible();
+
+        const alertResetPasswordFailMessage = await loginPage.getAlertResetPasswordFailModal();
+        // console.log('alertResetPasswordFailMessage ---> ', alertResetPasswordFailMessage)
+        expect(alertResetPasswordFailMessage).toContain('ผิดพลาด×ไม่สามารถคืนค่ารหัสผ่านได้');
+
+        await loginPage.clickConfirmModal();
+    });
+
+    test('TC_011: Modal reset password Input fields with valid username select email', async ({ loginPage }) => {
+        await loginPage.clickForgetPassword();
+        expect (await loginPage.locateResetPasswordModal()).toBeVisible();
+
+        const resetButton = await loginPage.locateResetButton();
+        expect(resetButton).toBeDisabled();
+        
+        await loginPage.clickSelectCompanyAtResetPassword('OumforTest');
+        expect(await loginPage.getSelectCompanyAtResetPassword()).not.toBeNull();
+        expect(await loginPage.getSelectCompanyAtResetPassword()).toBe('OumforTest');
+
+        await loginPage.fillUsernameAtResetPassword('6501');
+        expect(await loginPage.getUsernameAtResetPassword()).not.toBeNull();
+        expect(await loginPage.getUsernameAtResetPassword()).toBe('6501');
+        
+        expect(resetButton).toBeEnabled();
+
+        // await loginPage.clickEmailVertifyButton();
+
+        await loginPage.clickResetPassword();
+
+        expect(await loginPage.locateResetPasswordSuccessModal()).toBeVisible();
+
+        const alertResetPasswordSuccessMessage = await loginPage.getAlertResetPasswordSuccessModal();
+        // console.log('alertResetPasswordSuccessMessage ---> ', alertResetPasswordSuccessMessage)
+        expect(alertResetPasswordSuccessMessage).toContain('สำเร็จ×ระบบได้ส่ง Email ไปที่');
+
+        await loginPage.clickConfirmModal();
+    });
+
+    test('TC_012: Modal reset password Input fields with valid username select email', async ({ loginPage }) => {
+        await loginPage.clickForgetPassword();
+        expect (await loginPage.locateResetPasswordModal()).toBeVisible();
+
+        const resetButton = await loginPage.locateResetButton();
+        expect(resetButton).toBeDisabled();
+        
+        await loginPage.clickSelectCompanyAtResetPassword('OumforTest');
+        expect(await loginPage.getSelectCompanyAtResetPassword()).not.toBeNull();
+        expect(await loginPage.getSelectCompanyAtResetPassword()).toBe('OumforTest');
+
+        await loginPage.fillUsernameAtResetPassword('6501');
+        expect(await loginPage.getUsernameAtResetPassword()).not.toBeNull();
+        expect(await loginPage.getUsernameAtResetPassword()).toBe('6501');
+        
+        expect(resetButton).toBeEnabled();
+
+        await loginPage.clickPhoneVertifyButton();
+
+        await loginPage.clickResetPassword();
+
+        expect(await loginPage.locateResetPasswordSuccessModal()).toBeVisible();
+
+        const alertResetPasswordSuccessMessage = await loginPage.getAlertResetPasswordSuccessModal();
+        // console.log('alertResetPasswordSuccessMessage ---> ', alertResetPasswordSuccessMessage)
+        expect(alertResetPasswordSuccessMessage).toContain('สำเร็จ×ระบบได้ส่ง ข้อความ ไปที่');
+
+        await loginPage.clickConfirmModal();
+
+        expect(await loginPage.locateOtpModal()).toBeVisible();
+    });
+
+    test('TC_013: Modal Confirm OTP Input fields without OTP', async ({ loginPage }) => {
+        await loginPage.clickForgetPassword();
+        expect (await loginPage.locateResetPasswordModal()).toBeVisible();
+
+        const resetButton = await loginPage.locateResetButton();
+        expect(resetButton).toBeDisabled();
+        
+        await loginPage.clickSelectCompanyAtResetPassword('OumforTest');
+        expect(await loginPage.getSelectCompanyAtResetPassword()).not.toBeNull();
+        expect(await loginPage.getSelectCompanyAtResetPassword()).toBe('OumforTest');
+
+        await loginPage.fillUsernameAtResetPassword('6501');
+        expect(await loginPage.getUsernameAtResetPassword()).not.toBeNull();
+        expect(await loginPage.getUsernameAtResetPassword()).toBe('6501');
+        
+        expect(resetButton).toBeEnabled();
+
+        await loginPage.clickPhoneVertifyButton();
+
+        await loginPage.clickResetPassword();
+
+        expect(await loginPage.locateResetPasswordSuccessModal()).toBeVisible();
+
+        const alertResetPasswordSuccessMessage = await loginPage.getAlertResetPasswordSuccessModal();
+        // console.log('alertResetPasswordSuccessMessage ---> ', alertResetPasswordSuccessMessage)
+        expect(alertResetPasswordSuccessMessage).toContain('สำเร็จ×ระบบได้ส่ง ข้อความ ไปที่');
+
+        await loginPage.clickConfirmModal();
+
+        expect(await loginPage.locateOtpModal()).toBeVisible();
+
+        expect(resetButton).toBeDisabled();
+    });
+
+    test('TC_014: Click Manage Company button', async ({ loginPage, context }) => {
+        await loginPage.clicktoCCS();
+
+        // รอการเปิดแท็บใหม่
+        const newCCSPage = await context.waitForEvent('page'); // รอแท็บใหม่ถูกเปิด
+
+        // รอให้แท็บใหม่โหลดเสร็จ
+        await newCCSPage.waitForLoadState();
+
+        // ตรวจสอบ URL ของแท็บใหม่
+        const newCCSPageUrl = newCCSPage.url();
+        // console.log('URL ของแท็บใหม่:', newCCSPageUrl);
+
+        // คาดหวังว่า URL จะเป็นค่าที่กำหนด
+        expect(newCCSPageUrl).toBe('https://ccs.humansoft.co.th/auth/login');
+
+    });
 });
 
