@@ -1,7 +1,7 @@
 import { expect } from "@playwright/test";
 import { test } from "../pages/base";
 import { LoginPage } from "../pages/login.page";
-import { validUsers, problemUsers } from "../test-data/users";
+import { validInput, invalidInput } from "../test-data/users";
 import { log } from "console";
 import exp from "constants";
 
@@ -12,7 +12,7 @@ test.describe('Login Page', () => {
     });
     
     test('TC_001: Input fields without username and password', async ({ loginPage }) => {
-        const loginButton = await loginPage.locateLoginButton(); // ตรวจสอบว่าปุ่ม Login ถูก disable ตั้งแต่เริ่มต้น
+        const loginButton = await loginPage.locateLoginButton();
         expect(loginButton).toBeDisabled();
     
         await loginPage.clickSelectCompany('OumforTest');
@@ -77,48 +77,48 @@ test.describe('Login Page', () => {
     });
     
     test('TC_004: Login fails with an error message when using invalid credentials', async ({ loginPage }) => {
-        const loginButton = await loginPage.locateLoginButton(); // ตรวจสอบว่าปุ่ม Login ถูก disable ตั้งแต่เริ่มต้น
-        // expect(loginButton).toBeDisabled();
-        
+            const loginButton = await loginPage.locateLoginButton(); // ตรวจสอบว่าปุ่ม Login ถูก disable ตั้งแต่เริ่มต้น
+            // expect(loginButton).toBeDisabled();
+            
         await loginPage.clickSelectCompany('OumforTest');
-        expect(await loginPage.getSelectCompany()).not.toBeNull();
+            expect(await loginPage.getSelectCompany()).not.toBeNull();
         expect(await loginPage.getSelectCompany()).toBe('OumforTest');
-        
+            
         await loginPage.fillUsername('6501');
-        expect(await loginPage.getUsername()).not.toBeNull();
+            expect(await loginPage.getUsername()).not.toBeNull();
         expect(await loginPage.getUsername()).toBe('6501');
-        
+            
         await loginPage.fillPassword('5678');
-        expect(await loginPage.getPassword()).not.toBeNull();
+            expect(await loginPage.getPassword()).not.toBeNull();
         expect(await loginPage.getPassword()).toBe('5678');
-
-        expect(loginButton).not.toBeDisabled();
-
-        await loginPage.clickLogin();
-
-        expect(await loginPage.locateLoginFailModal()).toBeVisible();
-
-        const alertLoginFailMessage = await loginPage.getAlertLoginFailModal();
-        expect(alertLoginFailMessage).toContain('ชื่อผู้ใช้ หรือ รหัสผ่าน ไม่ถูกต้อง');
-
-        await loginPage.clickConfirmModal();
-        
-        // expect (await loginPage.page.url()).toBe('https://hms.humansoft.co.th/auth/login');
+    
+            expect(loginButton).not.toBeDisabled();
+    
+            await loginPage.clickLogin();
+    
+            expect(await loginPage.locateLoginFailModal()).toBeVisible();
+    
+            const alertLoginFailMessage = await loginPage.getAlertLoginFailModal();
+            expect(alertLoginFailMessage).toContain('ชื่อผู้ใช้ หรือ รหัสผ่าน ไม่ถูกต้อง');
+    
+            await loginPage.clickConfirmModal();
+            
+            // expect (await loginPage.page.url()).toBe('https://hms.humansoft.co.th/auth/login');
     });
 
     test('TC_005: Login successfully with valid credentials', async ({ loginPage }) => {
         await loginPage.clickSelectCompany('OumforTest');
         expect(await loginPage.getSelectCompany()).not.toBeNull();
         expect(await loginPage.getSelectCompany()).toBe('OumforTest');
-        
+            
         await loginPage.fillUsername('6501');
         expect(await loginPage.getUsername()).not.toBeNull();
         expect(await loginPage.getUsername()).toBe('6501');
-        
+            
         await loginPage.fillPassword('1234');
         expect(await loginPage.getPassword()).not.toBeNull();
         expect(await loginPage.getPassword()).toBe('1234');
-        
+            
         await loginPage.clickLogin();
         await loginPage.getWelcomeUrl();
         expect (await loginPage.page.url()).toBe('https://hms.humansoft.co.th/welcome');
@@ -207,7 +207,7 @@ test.describe('Login Page', () => {
         
         expect(resetButton).toBeEnabled();
 
-        await loginPage.clickPhoneVertifyButton();
+        await loginPage.clickMobilePhoneRadio();
 
         await loginPage.clickResetPassword();
 
@@ -237,7 +237,7 @@ test.describe('Login Page', () => {
         
         expect(resetButton).toBeEnabled();
 
-        // await loginPage.clickEmailVertifyButton();
+        await loginPage.clickEmailRadio();
 
         await loginPage.clickResetPassword();
 
@@ -267,7 +267,7 @@ test.describe('Login Page', () => {
         
         expect(resetButton).toBeEnabled();
 
-        await loginPage.clickPhoneVertifyButton();
+        await loginPage.clickMobilePhoneRadio();
 
         await loginPage.clickResetPassword();
 
@@ -279,7 +279,7 @@ test.describe('Login Page', () => {
 
         await loginPage.clickConfirmModal();
 
-        expect(await loginPage.locateOtpModal()).toBeVisible();
+        expect(await loginPage.locatorOTPModal()).toBeVisible();
     });
 
     test('TC_013: Modal Confirm OTP Input fields without OTP', async ({ loginPage }) => {
@@ -299,7 +299,7 @@ test.describe('Login Page', () => {
         
         expect(resetButton).toBeEnabled();
 
-        await loginPage.clickPhoneVertifyButton();
+        await loginPage.clickMobilePhoneRadio();
 
         await loginPage.clickResetPassword();
 
@@ -311,12 +311,12 @@ test.describe('Login Page', () => {
 
         await loginPage.clickConfirmModal();
 
-        expect(await loginPage.locateOtpModal()).toBeVisible();
+        expect(await loginPage.locatorOTPModal()).toBeVisible();
 
         expect(resetButton).toBeDisabled();
     });
 
-    test('TC_014: Click Manage Company button', async ({ loginPage, context }) => {
+    test('TC_014: Click manage company button', async ({ loginPage, context }) => {
         await loginPage.clicktoCCS();
 
         // รอการเปิดแท็บใหม่

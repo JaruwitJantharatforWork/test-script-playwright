@@ -3,8 +3,7 @@ import { removeTrailingSlash } from "../utils";
 
 export class LoginPage {
     baseURL = "https://hms.humansoft.co.th/auth/login";
-    ccsURL = "https://ccs.humansoft.co.th/auth/login"
-
+    
     locatorCompany  = '#mat-select-0';
     locatorCompanyAtResetpassword  = '#mat-select-1';
     locatorUsername = '[formcontrolname="email"]';
@@ -20,9 +19,10 @@ export class LoginPage {
     locatorForgotPassword = 'a.ng-tns-c485-2';
     locatorResetPasswordModal = '#login-modal-component';
     locatorResetPasswordButton = '[aria-label="reset"]';
-    locatorEmailVertifyButton = '[nzvalue="email"]';
-    locatorPhoneVertifyButton = '[nzvalue="mobilephone"]';
-    locatorOtpModal = '#login-modal-component';
+    locatorOTPModal = '#login-modal-component';
+    locatorRadioGroup  = 'nz-radio-group';
+    locatorEmailRadio = 'label[nzvalue="email"]';
+    locatorMobilePhoneRadio  = 'label[nzvalue="mobilephone"]'; 
 
     /**
     * @param {Page} page
@@ -57,6 +57,7 @@ export class LoginPage {
     }
     
     async locateLoginButton() {
+        await this.page.waitForSelector(this.locatorLoginButton);
         return this.page.locator(this.locatorLoginButton);
     };
     
@@ -65,10 +66,12 @@ export class LoginPage {
     };
     
     async locateResetPasswordFailModal() {
+        await this.page.waitForSelector(this.locatorFailModal);
         return this.page.locator(this.locatorFailModal);
     };
 
     async locateResetPasswordSuccessModal() {
+        await this.page.waitForSelector(this.locatorSuccessModal);
         return this.page.locator(this.locatorSuccessModal);
     };
 
@@ -77,17 +80,35 @@ export class LoginPage {
     };
 
     async locateResetButton() {
+        await this.page.waitForSelector(this.locatorResetPasswordButton);
         return this.page.locator(this.locatorResetPasswordButton);
     }
 
-    async locateOtpModal() {
-        return this.page.locator(this.locatorOtpModal);
+    async locateOTPModal() {
+        return this.page.locator(this.locatorOTPModal);
     };
 
     async locateCCS() {
         return await this.page.locator(this.locatorCCS);
     };    
 
+    async locateAlertUsername () {
+        await this.page.waitForSelector(this.locatorAlertUsername);
+        return await this.page.locator(this.locatorAlertUsername);
+    };
+   
+    async locateAlertPassword () {
+        await this.page.waitForSelector(this.locatorAlertPassword);
+        return await this.page.locator(this.locatorAlertPassword);
+    };
+
+    async locateEmailRadio() {
+        return await this.page.locator(this.locatorEmailRadio);
+    };
+    
+    async locateMobilePhoneRadio() {
+        return await this.page.locator(this.locatorMobilePhoneRadio);
+    };
 
     /* Input */
 
@@ -156,14 +177,15 @@ export class LoginPage {
     };
 
     async clickResetPassword() {
+        await this.page.waitForSelector(this.locatorResetPasswordButton);
         await this.page.locator(this.locatorResetPasswordButton).click();
     };
 
-    async clickEmailVertifyButton() {
-        await this.page.locator(this.locatorEmailVertifyButton).click();
+    async clickEmailRadio() {
+        await this.page.locator(this.locatorEmailRadio).click();
     };
-    async clickPhoneVertifyButton() {
-        await this.page.locator(this.locatorPhoneVertifyButton).click();
+    async clickMobilePhoneRadio() {
+        await this.page.locator(this.locatorMobilePhoneRadio).click();
     };
 
     /* Get Data */
@@ -274,6 +296,12 @@ export class LoginPage {
     }
 
     async getWelcomeUrl() {
+        const currentUrl = this.page.url();  // ดึง current URL เป็น string
+        // รอให้ URL เปลี่ยนแปลงและมีคำว่า "welcome"
+        await this.page.waitForURL(url => /welcome/.test(url.href) && url.href !== currentUrl, { timeout: 5000 });
+        const newUrl = await this.page.url(); 
+        return newUrl;
+        
         // const currentUrl = this.page.url();
       
         // // await this.page.waitForURL(url => url !== currentUrl, { timeout: 5000 });  
@@ -283,12 +311,6 @@ export class LoginPage {
         // await this.page.waitForURL(url => url !== currentUrl);  
         // const newUrl = await this.page.url(); 
         // return newUrl;
-        
-        const currentUrl = this.page.url();  // ดึง current URL เป็น string
-        // รอให้ URL เปลี่ยนแปลงและมีคำว่า "welcome"
-        await this.page.waitForURL(url => /welcome/.test(url.href) && url.href !== currentUrl, { timeout: 5000 });
-        const newUrl = await this.page.url(); 
-        return newUrl;
     };
 
     async getCCSUrl() {

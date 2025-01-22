@@ -61,16 +61,110 @@
   },
   "suites": [
     {
-      "title": "login.spec.js",
-      "file": "login.spec.js",
+      "title": "login_adjust.spec.js",
+      "file": "login_adjust.spec.js",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Login Page",
-          "file": "login.spec.js",
-          "line": 8,
+          "title": "Valid Input at Login Fuction",
+          "file": "login_adjust.spec.js",
+          "line": 12,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_001: Login successfully with valid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 14534,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-01-22T12:14:04.117Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Valid-Input-a-5935c-ully-with-valid-credentials-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Valid-Input-a-5935c-ully-with-valid-credentials-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d525c8b60d279cbfa900-22bfe64926ab7062f588",
+              "file": "login_adjust.spec.js",
+              "line": 16,
+              "column": 9
+            },
+            {
+              "title": "TC_001: Click show password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 8073,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-01-22T12:14:04.156Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Valid-Input-a-2ccdf--TC-001-Click-show-password-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Valid-Input-a-2ccdf--TC-001-Click-show-password-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d525c8b60d279cbfa900-dda720fd6acd9eb603f9",
+              "file": "login_adjust.spec.js",
+              "line": 34,
+              "column": 9
+            }
+          ]
+        },
+        {
+          "title": "Invalid Input at Login Fuction",
+          "file": "login_adjust.spec.js",
+          "line": 49,
           "column": 6,
           "specs": [
             {
@@ -86,24 +180,24 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 2,
                       "status": "passed",
-                      "duration": 8283,
+                      "duration": 9349,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-20T10:56:44.353Z",
+                      "startTime": "2025-01-22T12:14:04.158Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-001-In-48e52-thout-username-and-password-chromium\\test-finished-1.png"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-a8ebb-thout-username-and-password-chromium\\test-finished-1.png"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-001-In-48e52-thout-username-and-password-chromium\\trace.zip"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-a8ebb-thout-username-and-password-chromium\\trace.zip"
                         }
                       ]
                     }
@@ -111,9 +205,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "badc1754af1944f68b2b-d1f2d20b8238847d98ce",
-              "file": "login.spec.js",
-              "line": 14,
+              "id": "d525c8b60d279cbfa900-b99a601726ed0570e5c6",
+              "file": "login_adjust.spec.js",
+              "line": 53,
               "column": 9
             },
             {
@@ -129,24 +223,24 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 3,
                       "status": "passed",
-                      "duration": 8834,
+                      "duration": 9585,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-20T10:56:44.354Z",
+                      "startTime": "2025-01-22T12:14:04.144Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-002-Input-fields-without-username-chromium\\test-finished-1.png"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-23332-put-fields-without-username-chromium\\test-finished-1.png"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-002-Input-fields-without-username-chromium\\trace.zip"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-23332-put-fields-without-username-chromium\\trace.zip"
                         }
                       ]
                     }
@@ -154,9 +248,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "badc1754af1944f68b2b-a925d6d47977395f7153",
-              "file": "login.spec.js",
-              "line": 33,
+              "id": "d525c8b60d279cbfa900-5ca53961e5dfd72e9fb5",
+              "file": "login_adjust.spec.js",
+              "line": 53,
               "column": 9
             },
             {
@@ -172,24 +266,24 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 8893,
+                      "duration": 8943,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-20T10:56:44.364Z",
+                      "startTime": "2025-01-22T12:14:13.439Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-003-Input-fields-without-password-chromium\\test-finished-1.png"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-dc93a-put-fields-without-password-chromium\\test-finished-1.png"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-003-Input-fields-without-password-chromium\\trace.zip"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-dc93a-put-fields-without-password-chromium\\trace.zip"
                         }
                       ]
                     }
@@ -197,13 +291,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "badc1754af1944f68b2b-d66e0c918e9a898066c0",
-              "file": "login.spec.js",
-              "line": 56,
+              "id": "d525c8b60d279cbfa900-333006fe1788124ad5e9",
+              "file": "login_adjust.spec.js",
+              "line": 53,
               "column": 9
             },
             {
-              "title": "TC_004: Login fails with an error message when using invalid credentials",
+              "title": "TC_004: Input fields invalid credentials",
               "ok": true,
               "tags": [],
               "tests": [
@@ -217,22 +311,22 @@
                     {
                       "workerIndex": 3,
                       "status": "passed",
-                      "duration": 10558,
+                      "duration": 8432,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-20T10:56:44.361Z",
+                      "startTime": "2025-01-22T12:14:14.785Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-004-Lo-f607e-n-using-invalid-credentials-chromium\\test-finished-1.png"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-675bf--fields-invalid-credentials-chromium\\test-finished-1.png"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-004-Lo-f607e-n-using-invalid-credentials-chromium\\trace.zip"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-675bf--fields-invalid-credentials-chromium\\trace.zip"
                         }
                       ]
                     }
@@ -240,13 +334,64 @@
                   "status": "expected"
                 }
               ],
-              "id": "badc1754af1944f68b2b-c75e46500ac1e26b91f0",
-              "file": "login.spec.js",
-              "line": 79,
+              "id": "d525c8b60d279cbfa900-144e1e1055d0ed8ff916",
+              "file": "login_adjust.spec.js",
+              "line": 53,
+              "column": 9
+            }
+          ]
+        },
+        {
+          "title": "Valid Input at Reset Password Function",
+          "file": "login_adjust.spec.js",
+          "line": 108,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_001: Modal reset password Input fields with valid username select email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 10830,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-01-22T12:14:14.790Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Valid-Input-a-68f35-valid-username-select-email-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Valid-Input-a-68f35-valid-username-select-email-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d525c8b60d279cbfa900-5925757329568b596874",
+              "file": "login_adjust.spec.js",
+              "line": 112,
               "column": 9
             },
             {
-              "title": "TC_005: Login successfully with valid credentials",
+              "title": "TC_002: Modal reset password Input fields with valid username select phone",
               "ok": true,
               "tags": [],
               "tests": [
@@ -260,22 +405,22 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 11977,
+                      "duration": 8498,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-20T10:56:53.454Z",
+                      "startTime": "2025-01-22T12:14:19.737Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-005-Lo-ba35e-ully-with-valid-credentials-chromium\\test-finished-1.png"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Valid-Input-a-8ec9e-valid-username-select-phone-chromium\\test-finished-1.png"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-005-Lo-ba35e-ully-with-valid-credentials-chromium\\trace.zip"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Valid-Input-a-8ec9e-valid-username-select-phone-chromium\\trace.zip"
                         }
                       ]
                     }
@@ -283,13 +428,21 @@
                   "status": "expected"
                 }
               ],
-              "id": "badc1754af1944f68b2b-fe523d5c9b5ce9e6bfff",
-              "file": "login.spec.js",
-              "line": 109,
+              "id": "d525c8b60d279cbfa900-087fb21fa081b6c8389e",
+              "file": "login_adjust.spec.js",
+              "line": 112,
               "column": 9
-            },
+            }
+          ]
+        },
+        {
+          "title": "Invalid Input at Reset Password Function",
+          "file": "login_adjust.spec.js",
+          "line": 187,
+          "column": 6,
+          "specs": [
             {
-              "title": "TC_006: Click show password",
+              "title": "TC_001: Modal reset password Input fields without out username",
               "ok": true,
               "tags": [],
               "tests": [
@@ -303,22 +456,22 @@
                     {
                       "workerIndex": 1,
                       "status": "passed",
-                      "duration": 7336,
+                      "duration": 6858,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-20T10:56:54.025Z",
+                      "startTime": "2025-01-22T12:14:22.723Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-006-Click-show-password-chromium\\test-finished-1.png"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-7d1be-fields-without-out-username-chromium\\test-finished-1.png"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-006-Click-show-password-chromium\\trace.zip"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-7d1be-fields-without-out-username-chromium\\trace.zip"
                         }
                       ]
                     }
@@ -326,56 +479,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "badc1754af1944f68b2b-77a4ce9c95d9fd35d73d",
-              "file": "login.spec.js",
-              "line": 127,
+              "id": "d525c8b60d279cbfa900-04d1c5d4d02f5dbb1357",
+              "file": "login_adjust.spec.js",
+              "line": 191,
               "column": 9
             },
             {
-              "title": "TC_007: Click forgot password",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 7888,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-20T10:56:54.525Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-007-Click-forgot-password-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-007-Click-forgot-password-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "badc1754af1944f68b2b-74faf4dd994ad4957d67",
-              "file": "login.spec.js",
-              "line": 140,
-              "column": 9
-            },
-            {
-              "title": "TC_008: Modal reset password Input fields without username",
+              "title": "TC_002: Modal reset password Input fields without invalid username select email",
               "ok": true,
               "tags": [],
               "tests": [
@@ -389,22 +499,22 @@
                     {
                       "workerIndex": 3,
                       "status": "passed",
-                      "duration": 8242,
+                      "duration": 7621,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-20T10:56:56.525Z",
+                      "startTime": "2025-01-22T12:14:23.659Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-008-Mo-220e6-put-fields-without-username-chromium\\test-finished-1.png"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-5c60c-valid-username-select-email-chromium\\test-finished-1.png"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-008-Mo-220e6-put-fields-without-username-chromium\\trace.zip"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-5c60c-valid-username-select-email-chromium\\trace.zip"
                         }
                       ]
                     }
@@ -412,56 +522,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "badc1754af1944f68b2b-c2c2a8d208dfd853e237",
-              "file": "login.spec.js",
-              "line": 155,
+              "id": "d525c8b60d279cbfa900-d77a0d9e5b7da7dd271e",
+              "file": "login_adjust.spec.js",
+              "line": 191,
               "column": 9
             },
             {
-              "title": "TC_009: Modal reset password Input fields with invalid username select email",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "status": "passed",
-                      "duration": 7950,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-20T10:57:01.836Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-009-Mo-499f9-valid-username-select-email-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-009-Mo-499f9-valid-username-select-email-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "badc1754af1944f68b2b-c10f07fd5eca80f0ad2a",
-              "file": "login.spec.js",
-              "line": 163,
-              "column": 9
-            },
-            {
-              "title": "TC_010: Modal reset password Input fields with invalid username select phone",
+              "title": "TC_003: Modal reset password Input fields without invalid username select phone",
               "ok": true,
               "tags": [],
               "tests": [
@@ -475,22 +542,22 @@
                     {
                       "workerIndex": 2,
                       "status": "passed",
-                      "duration": 7837,
+                      "duration": 6810,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-20T10:57:03.157Z",
+                      "startTime": "2025-01-22T12:14:26.136Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-010-Mo-45669-valid-username-select-phone-chromium\\test-finished-1.png"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-17cb3-valid-username-select-phone-chromium\\test-finished-1.png"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-010-Mo-45669-valid-username-select-phone-chromium\\trace.zip"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-17cb3-valid-username-select-phone-chromium\\trace.zip"
                         }
                       ]
                     }
@@ -498,56 +565,21 @@
                   "status": "expected"
                 }
               ],
-              "id": "badc1754af1944f68b2b-2af794ea00d5684fea7a",
-              "file": "login.spec.js",
-              "line": 193,
+              "id": "d525c8b60d279cbfa900-7d926fd03506dbbdb49a",
+              "file": "login_adjust.spec.js",
+              "line": 191,
               "column": 9
-            },
+            }
+          ]
+        },
+        {
+          "title": "Manage Company Function",
+          "file": "login_adjust.spec.js",
+          "line": 268,
+          "column": 6,
+          "specs": [
             {
-              "title": "TC_011: Modal reset password Input fields with valid username select email",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 11393,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-20T10:57:05.177Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-011-Mo-c8b76-valid-username-select-email-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-011-Mo-c8b76-valid-username-select-email-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "badc1754af1944f68b2b-44af98b76e3aac5e2cc3",
-              "file": "login.spec.js",
-              "line": 223,
-              "column": 9
-            },
-            {
-              "title": "TC_012: Modal reset password Input fields with valid username select email",
+              "title": "TC_001: Click manage Company button",
               "ok": true,
               "tags": [],
               "tests": [
@@ -561,22 +593,27 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 7616,
+                      "duration": 7305,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-20T10:57:06.281Z",
+                      "startTime": "2025-01-22T12:14:28.642Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-012-Mo-add13-valid-username-select-email-chromium\\test-finished-1.png"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Manage-Compan-e336e-Click-manage-Company-button-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Manage-Compan-e336e-Click-manage-Company-button-chromium\\test-finished-2.png"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-012-Mo-add13-valid-username-select-email-chromium\\trace.zip"
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Manage-Compan-e336e-Click-manage-Company-button-chromium\\trace.zip"
                         }
                       ]
                     }
@@ -584,101 +621,10 @@
                   "status": "expected"
                 }
               ],
-              "id": "badc1754af1944f68b2b-88b6508b2649a0ac9b39",
-              "file": "login.spec.js",
-              "line": 253,
-              "column": 9
-            },
-            {
-              "title": "TC_013: Modal Confirm OTP Input fields without OTP",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "status": "passed",
-                      "duration": 7353,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-20T10:57:10.190Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-013-Mo-47fea-TP-Input-fields-without-OTP-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-013-Mo-47fea-TP-Input-fields-without-OTP-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "badc1754af1944f68b2b-b896f6dfe45f86a2151d",
-              "file": "login.spec.js",
-              "line": 285,
-              "column": 9
-            },
-            {
-              "title": "TC_014: Click Manage Company button",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 9343,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-20T10:57:11.341Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-014-Click-Manage-Company-button-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-014-Click-Manage-Company-button-chromium\\test-finished-2.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login-Login-Page-TC-014-Click-Manage-Company-button-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "badc1754af1944f68b2b-c7a392021c034a771fa0",
-              "file": "login.spec.js",
-              "line": 319,
-              "column": 9
+              "id": "d525c8b60d279cbfa900-f626ab1f188240bb403f",
+              "file": "login_adjust.spec.js",
+              "line": 269,
+              "column": 7
             }
           ]
         }
@@ -687,9 +633,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-20T10:56:43.771Z",
-    "duration": 37561.595,
-    "expected": 14,
+    "startTime": "2025-01-22T12:14:03.578Z",
+    "duration": 32931.115999999995,
+    "expected": 12,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
