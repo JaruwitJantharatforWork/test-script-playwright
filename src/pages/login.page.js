@@ -312,7 +312,8 @@ export class LoginPage {
     async getWelcomeUrl() {
         const currentUrl = await this.page.url();  // ดึง current URL เป็น string
         // รอให้ URL เปลี่ยนแปลงและมีคำว่า "welcome"
-        await this.page.waitForURL(url => /welcome/.test(url.href) && url.href !== currentUrl, { timeout: 10000 });
+        await this.page.waitForURL(url => /welcome/.test(url.href) && url.href !== currentUrl);
+        await this.page.waitForLoadState('load'); 
         const newUrl = await this.page.url(); 
         return newUrl;
         

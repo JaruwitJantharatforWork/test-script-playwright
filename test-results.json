@@ -81,7 +81,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 14179,
+                  "duration": 13546,
                   "errors": [],
                   "stdout": [
                     {
@@ -93,7 +93,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-28T11:55:31.862Z",
+                  "startTime": "2025-01-29T03:54:50.908Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -131,7 +131,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 11809,
+                  "duration": 14950,
                   "errors": [],
                   "stdout": [
                     {
@@ -143,7 +143,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-28T11:55:47.307Z",
+                  "startTime": "2025-01-29T03:55:05.360Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -181,7 +181,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 12094,
+                  "duration": 12542,
                   "errors": [],
                   "stdout": [
                     {
@@ -193,7 +193,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-28T11:55:59.708Z",
+                  "startTime": "2025-01-29T03:55:20.961Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -231,7 +231,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 12776,
+                  "duration": 13256,
                   "errors": [],
                   "stdout": [
                     {
@@ -243,7 +243,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-28T11:56:12.418Z",
+                  "startTime": "2025-01-29T03:55:34.113Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -281,7 +281,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 11632,
+                  "duration": 12254,
                   "errors": [],
                   "stdout": [
                     {
@@ -293,7 +293,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-28T11:56:25.787Z",
+                  "startTime": "2025-01-29T03:55:47.932Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -331,7 +331,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 12705,
+                  "duration": 12441,
                   "errors": [],
                   "stdout": [
                     {
@@ -343,7 +343,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-28T11:56:37.982Z",
+                  "startTime": "2025-01-29T03:56:00.778Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -381,7 +381,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 12838,
+                  "duration": 17278,
                   "errors": [],
                   "stdout": [
                     {
@@ -393,7 +393,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-28T11:56:51.291Z",
+                  "startTime": "2025-01-29T03:56:13.808Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -431,7 +431,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 12249,
+                  "duration": 12908,
                   "errors": [],
                   "stdout": [
                     {
@@ -443,7 +443,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-28T11:57:04.699Z",
+                  "startTime": "2025-01-29T03:56:31.707Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -481,7 +481,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 12282,
+                  "duration": 14265,
                   "errors": [],
                   "stdout": [
                     {
@@ -493,7 +493,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-28T11:57:17.551Z",
+                  "startTime": "2025-01-29T03:56:45.165Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -530,8 +530,8 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 12106,
+                  "status": "interrupted",
+                  "duration": 22236,
                   "errors": [],
                   "stdout": [
                     {
@@ -543,12 +543,12 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-28T11:57:30.452Z",
+                  "startTime": "2025-01-29T03:56:59.988Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-15922-สาร-ขอเอกสารรับรองเงินเดือน-chromium\\test-finished-1.png"
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-15922-สาร-ขอเอกสารรับรองเงินเดือน-chromium\\test-failed-1.png"
                     },
                     {
                       "name": "trace",
@@ -558,7 +558,7 @@
                   ]
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "217198a80e852077fe39-e733b08fca61f4043414",
@@ -577,38 +577,8 @@
               "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 12781,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "link_url -->  /profile/documents/work-certificate\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/work-certificate\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-28T11:57:43.136Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-3e14d-กสาร-ขอเอกสารรับรองการทำงาน-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-3e14d-กสาร-ขอเอกสารรับรองการทำงาน-chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
           "id": "217198a80e852077fe39-84791d6cc3fff7dd999a",
@@ -627,38 +597,8 @@
               "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 11712,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "link_url -->  /profile/documents/visa\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/visa\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-28T11:57:56.525Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-33dcc-าร-ขอเอกสารรับรองการขอวีซ่า-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-33dcc-าร-ขอเอกสารรับรองการขอวีซ่า-chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
           "id": "217198a80e852077fe39-a23885f9667d13b240f0",
@@ -677,38 +617,8 @@
               "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 12296,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "link_url -->  /profile/salary/calculate\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/salary/calculate\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-28T11:58:08.800Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-ข้อมูลคำนวณเงิน-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-ข้อมูลคำนวณเงิน-chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
           "id": "217198a80e852077fe39-a9cb6a7e6021fcb72585",
@@ -727,38 +637,8 @@
               "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 12799,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "link_url -->  /profile/slip\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/slip\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-28T11:58:21.666Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-สลิปเงินเดือน-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-สลิปเงินเดือน-chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
           "id": "217198a80e852077fe39-0b7c496ac125a74f4e8f",
@@ -777,38 +657,8 @@
               "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 11997,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "link_url -->  todo/all\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/todo/all\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-28T11:58:35.085Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-Todo-Lists-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-Todo-Lists-chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
           "id": "217198a80e852077fe39-7d0054febae8d9ca772f",
@@ -827,38 +677,8 @@
               "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 16093,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "link_url -->  /profile/workcycle-plan\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/workcycle-plan\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-28T11:58:47.670Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อ-17628--วางแผนกะการทำงาน---วันหยุด-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อ-17628--วางแผนกะการทำงาน---วันหยุด-chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
           "id": "217198a80e852077fe39-e244c2dbbda73d121529",
@@ -877,38 +697,8 @@
               "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 12864,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "link_url -->  /profile/organization-policy\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/organization-policy\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-28T11:59:04.370Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-นโยบายบริษัท-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-นโยบายบริษัท-chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
           "id": "217198a80e852077fe39-f0b0233de8eba3f69e7f",
@@ -927,38 +717,8 @@
               "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 11862,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "link_url -->  /my-assessment/assessment-employee\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/my-assessment/assessment-employee\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-28T11:59:17.811Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-d2009--ตอบแบบประเมินพนักงานทั่วไป-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-d2009--ตอบแบบประเมินพนักงานทั่วไป-chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
           "id": "217198a80e852077fe39-cd7d35aef673106415d4",
@@ -977,38 +737,8 @@
               "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 12491,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "link_url -->  /my-assessment/assessment-probationary\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/my-assessment/assessment-probationary\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-28T11:59:30.248Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-5610b-น-ตอบแบบประเมินพนักงานทดลอง-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-5610b-น-ตอบแบบประเมินพนักงานทดลอง-chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
           "id": "217198a80e852077fe39-893c5bc70ee210e9feb2",
@@ -1027,38 +757,8 @@
               "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 27967,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "link_url -->  /profile/e-library\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/e-library\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-28T11:59:43.285Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-a7768-ล่งเรียนรู้-E-library-Beta--chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-a7768-ล่งเรียนรู้-E-library-Beta--chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
           "id": "217198a80e852077fe39-b8ed19a159655a19b8ce",
@@ -1077,38 +777,8 @@
               "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 24953,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "link_url -->  /profile/e-learning\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/e-learning\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-28T12:00:11.894Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-6a773-่งเรียนรู้-E-learning-Beta--chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-6a773-่งเรียนรู้-E-learning-Beta--chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
           "id": "217198a80e852077fe39-835e3683d3d27f7ea286",
@@ -1121,10 +791,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-28T11:55:31.362Z",
-    "duration": 306646.879,
-    "expected": 21,
-    "skipped": 0,
+    "startTime": "2025-01-29T03:54:50.480Z",
+    "duration": 152637.39800000002,
+    "expected": 9,
+    "skipped": 12,
     "unexpected": 0,
     "flaky": 0
   }
