@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 4
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -50,592 +50,1080 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 1000000
       }
     ],
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.49.1",
-    "workers": 4,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "login_adjust.spec.js",
-      "file": "login_adjust.spec.js",
+      "title": "menu.spec.js",
+      "file": "menu.spec.js",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-          "title": "Valid Input at Login Fuction",
-          "file": "login_adjust.spec.js",
-          "line": 12,
-          "column": 6,
-          "specs": [
+          "title": "TC_001 Click menu ข้อมูลของท่าน/ภาพรวมของท่าน",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "TC_001: Login successfully with valid credentials",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 14179,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 14534,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-22T12:14:04.117Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Valid-Input-a-5935c-ully-with-valid-credentials-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Valid-Input-a-5935c-ully-with-valid-credentials-chromium\\trace.zip"
-                        }
-                      ]
+                      "text": "link_url -->  /profile/dashboard\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/dashboard\n"
                     }
                   ],
-                  "status": "expected"
-                }
-              ],
-              "id": "d525c8b60d279cbfa900-22bfe64926ab7062f588",
-              "file": "login_adjust.spec.js",
-              "line": 16,
-              "column": 9
-            },
-            {
-              "title": "TC_001: Click show password",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:55:31.862Z",
+                  "attachments": [
                     {
-                      "workerIndex": 1,
-                      "status": "passed",
-                      "duration": 8073,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-22T12:14:04.156Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Valid-Input-a-2ccdf--TC-001-Click-show-password-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Valid-Input-a-2ccdf--TC-001-Click-show-password-chromium\\trace.zip"
-                        }
-                      ]
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-ภาพรวมของท่าน-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-ภาพรวมของท่าน-chromium\\trace.zip"
                     }
-                  ],
-                  "status": "expected"
+                  ]
                 }
               ],
-              "id": "d525c8b60d279cbfa900-dda720fd6acd9eb603f9",
-              "file": "login_adjust.spec.js",
-              "line": 34,
-              "column": 9
+              "status": "expected"
             }
-          ]
+          ],
+          "id": "217198a80e852077fe39-662e72ae957e28c83ad7",
+          "file": "menu.spec.js",
+          "line": 107,
+          "column": 25
         },
         {
-          "title": "Invalid Input at Login Fuction",
-          "file": "login_adjust.spec.js",
-          "line": 49,
-          "column": 6,
-          "specs": [
+          "title": "TC_001 Click menu ข้อมูลของท่าน/ข้อมูลส่วนตัว",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "TC_001: Input fields without username and password",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 11809,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 9349,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-22T12:14:04.158Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-a8ebb-thout-username-and-password-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-a8ebb-thout-username-and-password-chromium\\trace.zip"
-                        }
-                      ]
+                      "text": "link_url -->  /profile/profile\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/profile\n"
                     }
                   ],
-                  "status": "expected"
-                }
-              ],
-              "id": "d525c8b60d279cbfa900-b99a601726ed0570e5c6",
-              "file": "login_adjust.spec.js",
-              "line": 53,
-              "column": 9
-            },
-            {
-              "title": "TC_002: Input fields without username",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:55:47.307Z",
+                  "attachments": [
                     {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 9585,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-22T12:14:04.144Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-23332-put-fields-without-username-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-23332-put-fields-without-username-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "d525c8b60d279cbfa900-5ca53961e5dfd72e9fb5",
-              "file": "login_adjust.spec.js",
-              "line": 53,
-              "column": 9
-            },
-            {
-              "title": "TC_003: Input fields without password",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-ข้อมูลส่วนตัว-chromium\\test-finished-1.png"
+                    },
                     {
-                      "workerIndex": 1,
-                      "status": "passed",
-                      "duration": 8943,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-22T12:14:13.439Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-dc93a-put-fields-without-password-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-dc93a-put-fields-without-password-chromium\\trace.zip"
-                        }
-                      ]
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-ข้อมูลส่วนตัว-chromium\\trace.zip"
                     }
-                  ],
-                  "status": "expected"
+                  ]
                 }
               ],
-              "id": "d525c8b60d279cbfa900-333006fe1788124ad5e9",
-              "file": "login_adjust.spec.js",
-              "line": 53,
-              "column": 9
-            },
-            {
-              "title": "TC_004: Input fields invalid credentials",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 8432,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-22T12:14:14.785Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-675bf--fields-invalid-credentials-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-675bf--fields-invalid-credentials-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "d525c8b60d279cbfa900-144e1e1055d0ed8ff916",
-              "file": "login_adjust.spec.js",
-              "line": 53,
-              "column": 9
+              "status": "expected"
             }
-          ]
+          ],
+          "id": "217198a80e852077fe39-a601d3c2ccf7fb5a6699",
+          "file": "menu.spec.js",
+          "line": 107,
+          "column": 25
         },
         {
-          "title": "Valid Input at Reset Password Function",
-          "file": "login_adjust.spec.js",
-          "line": 108,
-          "column": 6,
-          "specs": [
+          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอลางาน",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "TC_001: Modal reset password Input fields with valid username select email",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 12094,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 10830,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-22T12:14:14.790Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Valid-Input-a-68f35-valid-username-select-email-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Valid-Input-a-68f35-valid-username-select-email-chromium\\trace.zip"
-                        }
-                      ]
+                      "text": "link_url -->  /profile/documents/time-leave\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/time-leave\n"
                     }
                   ],
-                  "status": "expected"
-                }
-              ],
-              "id": "d525c8b60d279cbfa900-5925757329568b596874",
-              "file": "login_adjust.spec.js",
-              "line": 112,
-              "column": 9
-            },
-            {
-              "title": "TC_002: Modal reset password Input fields with valid username select phone",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:55:59.708Z",
+                  "attachments": [
                     {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 8498,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-22T12:14:19.737Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Valid-Input-a-8ec9e-valid-username-select-phone-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Valid-Input-a-8ec9e-valid-username-select-phone-chromium\\trace.zip"
-                        }
-                      ]
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-ข้อมูลของท่าน-ยื่อเอกสาร-ขอลางาน-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-ข้อมูลของท่าน-ยื่อเอกสาร-ขอลางาน-chromium\\trace.zip"
                     }
-                  ],
-                  "status": "expected"
+                  ]
                 }
               ],
-              "id": "d525c8b60d279cbfa900-087fb21fa081b6c8389e",
-              "file": "login_adjust.spec.js",
-              "line": 112,
-              "column": 9
+              "status": "expected"
             }
-          ]
+          ],
+          "id": "217198a80e852077fe39-28380b9824ba119786f6",
+          "file": "menu.spec.js",
+          "line": 96,
+          "column": 29
         },
         {
-          "title": "Invalid Input at Reset Password Function",
-          "file": "login_adjust.spec.js",
-          "line": 187,
-          "column": 6,
-          "specs": [
+          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอโอที",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "TC_001: Modal reset password Input fields without out username",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 12776,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "workerIndex": 1,
-                      "status": "passed",
-                      "duration": 6858,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-22T12:14:22.723Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-7d1be-fields-without-out-username-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-7d1be-fields-without-out-username-chromium\\trace.zip"
-                        }
-                      ]
+                      "text": "link_url -->  /profile/documents/ot\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/ot\n"
                     }
                   ],
-                  "status": "expected"
-                }
-              ],
-              "id": "d525c8b60d279cbfa900-04d1c5d4d02f5dbb1357",
-              "file": "login_adjust.spec.js",
-              "line": 191,
-              "column": 9
-            },
-            {
-              "title": "TC_002: Modal reset password Input fields without invalid username select email",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:56:12.418Z",
+                  "attachments": [
                     {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 7621,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-22T12:14:23.659Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-5c60c-valid-username-select-email-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-5c60c-valid-username-select-email-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "d525c8b60d279cbfa900-d77a0d9e5b7da7dd271e",
-              "file": "login_adjust.spec.js",
-              "line": 191,
-              "column": 9
-            },
-            {
-              "title": "TC_003: Modal reset password Input fields without invalid username select phone",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-ข้อมูลของท่าน-ยื่อเอกสาร-ขอโอที-chromium\\test-finished-1.png"
+                    },
                     {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 6810,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-22T12:14:26.136Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-17cb3-valid-username-select-phone-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Invalid-Input-17cb3-valid-username-select-phone-chromium\\trace.zip"
-                        }
-                      ]
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-ข้อมูลของท่าน-ยื่อเอกสาร-ขอโอที-chromium\\trace.zip"
                     }
-                  ],
-                  "status": "expected"
+                  ]
                 }
               ],
-              "id": "d525c8b60d279cbfa900-7d926fd03506dbbdb49a",
-              "file": "login_adjust.spec.js",
-              "line": 191,
-              "column": 9
+              "status": "expected"
             }
-          ]
+          ],
+          "id": "217198a80e852077fe39-81824bb5be103d4d6410",
+          "file": "menu.spec.js",
+          "line": 96,
+          "column": 29
         },
         {
-          "title": "Manage Company Function",
-          "file": "login_adjust.spec.js",
-          "line": 268,
-          "column": 6,
-          "specs": [
+          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอเพิ่มเวลา",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "TC_001: Click manage Company button",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 11632,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 7305,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-22T12:14:28.642Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Manage-Compan-e336e-Click-manage-Company-button-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Manage-Compan-e336e-Click-manage-Company-button-chromium\\test-finished-2.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\login_adjust-Manage-Compan-e336e-Click-manage-Company-button-chromium\\trace.zip"
-                        }
-                      ]
+                      "text": "link_url -->  /profile/documents/time-adjust\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/time-adjust\n"
                     }
                   ],
-                  "status": "expected"
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:56:25.787Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-79a3f-ท่าน-ยื่อเอกสาร-ขอเพิ่มเวลา-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-79a3f-ท่าน-ยื่อเอกสาร-ขอเพิ่มเวลา-chromium\\trace.zip"
+                    }
+                  ]
                 }
               ],
-              "id": "d525c8b60d279cbfa900-f626ab1f188240bb403f",
-              "file": "login_adjust.spec.js",
-              "line": 269,
-              "column": 7
+              "status": "expected"
             }
-          ]
+          ],
+          "id": "217198a80e852077fe39-44c5a41b650c75ee1a88",
+          "file": "menu.spec.js",
+          "line": 96,
+          "column": 29
+        },
+        {
+          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอเปลี่ยนกะการทำงาน",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 12705,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "link_url -->  /profile/documents/work-cycle\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/work-cycle\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:56:37.982Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-72fbd-อเอกสาร-ขอเปลี่ยนกะการทำงาน-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-72fbd-อเอกสาร-ขอเปลี่ยนกะการทำงาน-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-378cfb1f5d1c9915addb",
+          "file": "menu.spec.js",
+          "line": 96,
+          "column": 29
+        },
+        {
+          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอเปลี่ยนวันหยุด",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 12838,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "link_url -->  /profile/documents/holiday\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/holiday\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:56:51.291Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-7b16b-ยื่อเอกสาร-ขอเปลี่ยนวันหยุด-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-7b16b-ยื่อเอกสาร-ขอเปลี่ยนวันหยุด-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-c6d192b81a8e58d24a76",
+          "file": "menu.spec.js",
+          "line": 96,
+          "column": 29
+        },
+        {
+          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอเบิกล่วงหน้า",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 12249,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "link_url -->  /profile/documents/withdraw\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/withdraw\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:57:04.699Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-89a7e-น-ยื่อเอกสาร-ขอเบิกล่วงหน้า-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-89a7e-น-ยื่อเอกสาร-ขอเบิกล่วงหน้า-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-83dc3333364da9fd2e44",
+          "file": "menu.spec.js",
+          "line": 96,
+          "column": 29
+        },
+        {
+          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอลาออก",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 12282,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "link_url -->  /profile/documents/resign\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/resign\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:57:17.551Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-ข้อมูลของท่าน-ยื่อเอกสาร-ขอลาออก-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-ข้อมูลของท่าน-ยื่อเอกสาร-ขอลาออก-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-7583b4ed96a99ab6f3bd",
+          "file": "menu.spec.js",
+          "line": 96,
+          "column": 29
+        },
+        {
+          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอเอกสารรับรองเงินเดือน",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 12106,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "link_url -->  /profile/documents/salary-doc\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/salary-doc\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:57:30.452Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-15922-สาร-ขอเอกสารรับรองเงินเดือน-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-15922-สาร-ขอเอกสารรับรองเงินเดือน-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-e733b08fca61f4043414",
+          "file": "menu.spec.js",
+          "line": 96,
+          "column": 29
+        },
+        {
+          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอเอกสารรับรองการทำงาน",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 12781,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "link_url -->  /profile/documents/work-certificate\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/work-certificate\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:57:43.136Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-3e14d-กสาร-ขอเอกสารรับรองการทำงาน-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-3e14d-กสาร-ขอเอกสารรับรองการทำงาน-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-84791d6cc3fff7dd999a",
+          "file": "menu.spec.js",
+          "line": 96,
+          "column": 29
+        },
+        {
+          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอเอกสารรับรองการขอวีซ่า",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 11712,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "link_url -->  /profile/documents/visa\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/visa\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:57:56.525Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-33dcc-าร-ขอเอกสารรับรองการขอวีซ่า-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-33dcc-าร-ขอเอกสารรับรองการขอวีซ่า-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-a23885f9667d13b240f0",
+          "file": "menu.spec.js",
+          "line": 96,
+          "column": 29
+        },
+        {
+          "title": "TC_001 Click menu ข้อมูลของท่าน/ข้อมูลคำนวณเงิน",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 12296,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "link_url -->  /profile/salary/calculate\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/salary/calculate\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:58:08.800Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-ข้อมูลคำนวณเงิน-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-ข้อมูลคำนวณเงิน-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-a9cb6a7e6021fcb72585",
+          "file": "menu.spec.js",
+          "line": 107,
+          "column": 25
+        },
+        {
+          "title": "TC_001 Click menu ข้อมูลของท่าน/สลิปเงินเดือน",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 12799,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "link_url -->  /profile/slip\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/slip\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:58:21.666Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-สลิปเงินเดือน-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-สลิปเงินเดือน-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-0b7c496ac125a74f4e8f",
+          "file": "menu.spec.js",
+          "line": 107,
+          "column": 25
+        },
+        {
+          "title": "TC_001 Click menu ข้อมูลของท่าน/Todo-Lists",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 11997,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "link_url -->  todo/all\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/todo/all\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:58:35.085Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-Todo-Lists-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-Todo-Lists-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-7d0054febae8d9ca772f",
+          "file": "menu.spec.js",
+          "line": 107,
+          "column": 25
+        },
+        {
+          "title": "TC_001 Click menu ข้อมูลของท่าน/วางแผนกะการทำงาน - วันหยุด",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 16093,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "link_url -->  /profile/workcycle-plan\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/workcycle-plan\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:58:47.670Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อ-17628--วางแผนกะการทำงาน---วันหยุด-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อ-17628--วางแผนกะการทำงาน---วันหยุด-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-e244c2dbbda73d121529",
+          "file": "menu.spec.js",
+          "line": 107,
+          "column": 25
+        },
+        {
+          "title": "TC_001 Click menu ข้อมูลของท่าน/นโยบายบริษัท",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 12864,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "link_url -->  /profile/organization-policy\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/organization-policy\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:59:04.370Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-นโยบายบริษัท-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-นโยบายบริษัท-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-f0b0233de8eba3f69e7f",
+          "file": "menu.spec.js",
+          "line": 107,
+          "column": 25
+        },
+        {
+          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ตอบแบบประเมิน/ตอบแบบประเมินพนักงานทั่วไป",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 11862,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "link_url -->  /my-assessment/assessment-employee\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/my-assessment/assessment-employee\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:59:17.811Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-d2009--ตอบแบบประเมินพนักงานทั่วไป-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-d2009--ตอบแบบประเมินพนักงานทั่วไป-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-cd7d35aef673106415d4",
+          "file": "menu.spec.js",
+          "line": 96,
+          "column": 29
+        },
+        {
+          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ตอบแบบประเมิน/ตอบแบบประเมินพนักงานทดลอง",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 12491,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "link_url -->  /my-assessment/assessment-probationary\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/my-assessment/assessment-probationary\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:59:30.248Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-5610b-น-ตอบแบบประเมินพนักงานทดลอง-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-5610b-น-ตอบแบบประเมินพนักงานทดลอง-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-893c5bc70ee210e9feb2",
+          "file": "menu.spec.js",
+          "line": 96,
+          "column": 29
+        },
+        {
+          "title": "TC_001_001: Click menu ข้อมูลของท่าน/แหล่งเรียนรู้/E-library (Beta)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 27967,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "link_url -->  /profile/e-library\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/e-library\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T11:59:43.285Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-a7768-ล่งเรียนรู้-E-library-Beta--chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-a7768-ล่งเรียนรู้-E-library-Beta--chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-b8ed19a159655a19b8ce",
+          "file": "menu.spec.js",
+          "line": 96,
+          "column": 29
+        },
+        {
+          "title": "TC_001_001: Click menu ข้อมูลของท่าน/แหล่งเรียนรู้/E-learning (Beta)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 24953,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "link_url -->  /profile/e-learning\n"
+                    },
+                    {
+                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/e-learning\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-28T12:00:11.894Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-6a773-่งเรียนรู้-E-learning-Beta--chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-6a773-่งเรียนรู้-E-learning-Beta--chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-835e3683d3d27f7ea286",
+          "file": "menu.spec.js",
+          "line": 96,
+          "column": 29
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-22T12:14:03.578Z",
-    "duration": 32931.115999999995,
-    "expected": 12,
+    "startTime": "2025-01-28T11:55:31.362Z",
+    "duration": 306646.879,
+    "expected": 21,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

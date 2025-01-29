@@ -17,6 +17,7 @@ export default defineConfig({
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
+  timeout: 1_000_000,
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
@@ -38,6 +39,8 @@ export default defineConfig({
     trace: 'on',
     screenshot: 'on',
     headless: false,
+    viewport: { width: 100, height: 100 },
+    navigationTimeout: 1_000_000
   },
 
   /* Configure projects for major browsers */

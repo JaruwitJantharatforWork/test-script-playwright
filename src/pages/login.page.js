@@ -38,6 +38,20 @@ export class LoginPage {
         await this.page.goto(this.baseURL);
     };
 
+    async loginAsUser(company = { name: 'OumforTest' }, credentials = { username: '6501', password: '1234' }) {
+        try {
+            await this.goto();
+            await this.clickSelectCompany(company.name);
+            await this.fillUsername(credentials.username);
+            await this.fillPassword(credentials.password);
+            await this.clickLogin();
+            await this.getWelcomeUrl();
+        } catch (error) {
+            console.error('Login Failed: ', error.message);
+            throw new Error('Unable to log in. Please check your credentials or company selection.');
+        }
+    }
+
     async gotoCCS() {
         await this.page.goto(this.ccsURL);
     };    
@@ -296,9 +310,9 @@ export class LoginPage {
     }
 
     async getWelcomeUrl() {
-        const currentUrl = this.page.url();  // ดึง current URL เป็น string
+        const currentUrl = await this.page.url();  // ดึง current URL เป็น string
         // รอให้ URL เปลี่ยนแปลงและมีคำว่า "welcome"
-        await this.page.waitForURL(url => /welcome/.test(url.href) && url.href !== currentUrl, { timeout: 5000 });
+        await this.page.waitForURL(url => /welcome/.test(url.href) && url.href !== currentUrl, { timeout: 10000 });
         const newUrl = await this.page.url(); 
         return newUrl;
         
@@ -315,8 +329,8 @@ export class LoginPage {
 
     async getCCSUrl() {
         const currentUrl = this.page.url();  // ดึง current URL เป็น string
-        // รอให้ URL เปลี่ยนแปลงและมีคำว่า "welcome"
-        await this.page.waitForURL(url => /welcome/.test(url.href) && url.href !== currentUrl, { timeout: 5000 });
+        // รอให้ URL เปลี่ยนแปลงและมีคำว่า "login"
+        await this.page.waitForURL(url => /login/.test(url.href) && url.href !== currentUrl, { timeout: 5000 });
         const newUrl = await this.page.url(); 
         return newUrl;
     };

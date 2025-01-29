@@ -279,7 +279,7 @@ test.describe('Login Page', () => {
 
         await loginPage.clickConfirmModal();
 
-        expect(await loginPage.locatorOTPModal()).toBeVisible();
+        expect(await loginPage.locateOTPModal()).toBeVisible();
     });
 
     test('TC_013: Modal Confirm OTP Input fields without OTP', async ({ loginPage }) => {
@@ -311,7 +311,7 @@ test.describe('Login Page', () => {
 
         await loginPage.clickConfirmModal();
 
-        expect(await loginPage.locatorOTPModal()).toBeVisible();
+        expect(await loginPage.locateOTPModal()).toBeVisible();
 
         expect(resetButton).toBeDisabled();
     });
