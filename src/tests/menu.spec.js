@@ -109,12 +109,8 @@ menuData.forEach(({ payload }) => {
                         await menuPage.clickChildItem(childMenu.menu_name);
                         const newPageURL = await menuPage.getNewPageURL(childMenu.link_url);
                         await expect(newPageURL).toMatch(childMenu.link_url);
-                    });
-
-                    
-                }
-        
-                
+                    });                  
+                }                
             }
         }
             

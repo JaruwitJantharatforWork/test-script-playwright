@@ -1,0 +1,125 @@
+{
+    "locator": [
+      {
+        
+      }
+    ],
+    "tests": [
+      {
+        "name": "TC_001 - ไม่กรอก username และ password",
+        "url": "https://hms.humansoft.co.th/auth/login",
+        "credentials": {
+          "companyname": "lucky_penny",
+          "username": "",
+          "password": ""
+        },
+        "expected": {
+          "message": "Please enter username and password."
+        }
+      },
+      {
+        "name": "TC_002 - ไม่กรอก username",
+        "url": "https://hms.humansoft.co.th/auth/login",
+        "credentials": {
+          "companyname": "lucky_penny",
+          "username": "",
+          "password": "1234"
+        },
+        "expected": {
+          "message": "Please enter your username."
+        }
+      },
+      {
+        "name": "TC_003 - ไม่กรอก password",
+        "url": "https://hms.humansoft.co.th/auth/login",
+        "credentials": {
+          "companyname": "lucky_penny",
+          "username": "650040",
+          "password": ""
+        },
+        "expected": {
+          "message": "Please enter your password."
+        }
+      },
+      {
+        "name": "TC_004 - กรอกข้อมูลผิดพลาด",
+        "url": "https://hms.humansoft.co.th/auth/login",
+        "credentials": {
+          "companyname": "lucky_penny",
+          "username": "650040",
+          "password": "wrongpass"
+        },
+        "expected": {
+          "message": "Invalid credentials."
+        }
+      },
+      {
+        "name": "TC_005 - เข้าสู่ระบบสำเร็จ",
+        "url": "https://hms.humansoft.co.th/auth/login",
+        "credentials": {
+          "companyname": "lucky_penny",
+          "username": "650040",
+          "password": "1234"
+        },
+        "expected": {
+          "message": "Login successful."
+        }
+      },
+      {
+        "name": "TC_007 - คลิกปุ่มลืมรหัสผ่าน",
+        "url": "https://hms.humansoft.co.th/auth/login",
+        "action": "clickForgotPassword",
+        "expected": {
+          "modalVisible": true
+        }
+      },
+      {
+        "name": "TC_008 - ไม่กรอกชื่อผู้ใช้ใน Reset Password",
+        "url": "https://hms.humansoft.co.th/auth/login",
+        "resetPassword": {
+          "username": ""
+        },
+        "expected": {
+          "message": "Please enter your username."
+        }
+      },
+      {
+        "name": "TC_011 - Reset Password สำเร็จ (Email)",
+        "url": "https://hms.humansoft.co.th/auth/login",
+        "resetPassword": {
+          "username": "650040",
+          "method": "email"
+        },
+        "expected": {
+          "message": "Reset link sent to email."
+        }
+      },
+      {
+        "name": "TC_012 - Reset Password สำเร็จ (Phone)",
+        "url": "https://hms.humansoft.co.th/auth/login",
+        "resetPassword": {
+          "username": "650040",
+          "method": "phone"
+        },
+        "expected": {
+          "message": "OTP sent to phone."
+        }
+      },
+      {
+        "name": "TC_013 - ไม่กรอก OTP",
+        "url": "https://hms.humansoft.co.th/auth/login",
+        "otp": "",
+        "expected": {
+          "message": "Please enter OTP."
+        }
+      },
+      {
+        "name": "TC_014 - คลิกปุ่ม Manage Company",
+        "url": "https://hms.humansoft.co.th/auth/login",
+        "action": "clickManageCompany",
+        "expected": {
+          "navigate": "/manage-company"
+        }
+      }
+    ]
+  }

@@ -43,7 +43,8 @@ export class MenuPage {
     async getNewPageURL(link_url) {
         console.log('link_url --> ', link_url); // ตรวจสอบค่า link_url
         const currentUrl = await this.page.url();
-        await this.page.waitForURL(url => url.href.includes(link_url) && url.href !== currentUrl, { timeout: 10000 });
+        await this.page.waitForURL(url => url.href.includes(link_url) && url.href !== currentUrl);
+        await this.page.waitForLoadState('load'); 
         const newUrl = await this.page.url();
         console.log('newUrl --> ', newUrl)
         return newUrl;

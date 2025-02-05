@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 4
     },
     "preserveOutput": "always",
     "reporter": [
@@ -56,746 +56,779 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.49.1",
-    "workers": 1,
+    "workers": 4,
     "webServer": null
   },
   "suites": [
     {
-      "title": "menu.spec.js",
-      "file": "menu.spec.js",
+      "title": "test.spec.js",
+      "file": "test.spec.js",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "TC_001 Click menu ข้อมูลของท่าน/ภาพรวมของท่าน",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "Login and Reset Password Tests",
+          "file": "test.spec.js",
+          "line": 16,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "TC_001 - ไม่กรอก username และ password",
+              "ok": false,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 13546,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 1000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "text": "link_url -->  /profile/dashboard\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/dashboard\n"
+                      "workerIndex": 0,
+                      "status": "failed",
+                      "duration": 5637,
+                      "error": {
+                        "message": "TypeError: loginPage.locator is not a function",
+                        "stack": "TypeError: loginPage.locator is not a function\n    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:104:42",
+                        "location": {
+                          "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                          "column": 42,
+                          "line": 104
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 102 |\u001b[39m       \u001b[90m// ตรวจสอบข้อความผลลัพธ์\u001b[39m\n \u001b[90m 103 |\u001b[39m       \u001b[36mif\u001b[39m (expected\u001b[33m.\u001b[39mmessage) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 104 |\u001b[39m         \u001b[36mconst\u001b[39m messageLocator \u001b[33m=\u001b[39m loginPage\u001b[33m.\u001b[39mlocator(\u001b[32m'.success-message, .error-message'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 105 |\u001b[39m         \u001b[36mawait\u001b[39m expect(messageLocator)\u001b[33m.\u001b[39mtoHaveText(expected\u001b[33m.\u001b[39mmessage)\u001b[33m;\u001b[39m\n \u001b[90m 106 |\u001b[39m       }\n \u001b[90m 107 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                            "column": 42,
+                            "line": 104
+                          },
+                          "message": "TypeError: loginPage.locator is not a function\n\n\u001b[0m \u001b[90m 102 |\u001b[39m       \u001b[90m// ตรวจสอบข้อความผลลัพธ์\u001b[39m\n \u001b[90m 103 |\u001b[39m       \u001b[36mif\u001b[39m (expected\u001b[33m.\u001b[39mmessage) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 104 |\u001b[39m         \u001b[36mconst\u001b[39m messageLocator \u001b[33m=\u001b[39m loginPage\u001b[33m.\u001b[39mlocator(\u001b[32m'.success-message, .error-message'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 105 |\u001b[39m         \u001b[36mawait\u001b[39m expect(messageLocator)\u001b[33m.\u001b[39mtoHaveText(expected\u001b[33m.\u001b[39mmessage)\u001b[33m;\u001b[39m\n \u001b[90m 106 |\u001b[39m       }\n \u001b[90m 107 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:104:42\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-05T03:30:14.599Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-23fe2-่กรอก-username-และ-password-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-23fe2-่กรอก-username-และ-password-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                        "column": 42,
+                        "line": 104
+                      }
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-29T03:54:50.908Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-ภาพรวมของท่าน-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-ภาพรวมของท่าน-chromium\\trace.zip"
-                    }
-                  ]
+                  "status": "unexpected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "217198a80e852077fe39-662e72ae957e28c83ad7",
-          "file": "menu.spec.js",
-          "line": 107,
-          "column": 25
-        },
-        {
-          "title": "TC_001 Click menu ข้อมูลของท่าน/ข้อมูลส่วนตัว",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "31be70adcd52654ff551-bd3a688e58ba2b9dbe96",
+              "file": "test.spec.js",
+              "line": 18,
+              "column": 9
+            },
             {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "TC_002 - ไม่กรอก username",
+              "ok": false,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 14950,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 1000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "text": "link_url -->  /profile/profile\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/profile\n"
+                      "workerIndex": 1,
+                      "status": "failed",
+                      "duration": 5795,
+                      "error": {
+                        "message": "TypeError: loginPage.locator is not a function",
+                        "stack": "TypeError: loginPage.locator is not a function\n    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:104:42",
+                        "location": {
+                          "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                          "column": 42,
+                          "line": 104
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 102 |\u001b[39m       \u001b[90m// ตรวจสอบข้อความผลลัพธ์\u001b[39m\n \u001b[90m 103 |\u001b[39m       \u001b[36mif\u001b[39m (expected\u001b[33m.\u001b[39mmessage) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 104 |\u001b[39m         \u001b[36mconst\u001b[39m messageLocator \u001b[33m=\u001b[39m loginPage\u001b[33m.\u001b[39mlocator(\u001b[32m'.success-message, .error-message'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 105 |\u001b[39m         \u001b[36mawait\u001b[39m expect(messageLocator)\u001b[33m.\u001b[39mtoHaveText(expected\u001b[33m.\u001b[39mmessage)\u001b[33m;\u001b[39m\n \u001b[90m 106 |\u001b[39m       }\n \u001b[90m 107 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                            "column": 42,
+                            "line": 104
+                          },
+                          "message": "TypeError: loginPage.locator is not a function\n\n\u001b[0m \u001b[90m 102 |\u001b[39m       \u001b[90m// ตรวจสอบข้อความผลลัพธ์\u001b[39m\n \u001b[90m 103 |\u001b[39m       \u001b[36mif\u001b[39m (expected\u001b[33m.\u001b[39mmessage) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 104 |\u001b[39m         \u001b[36mconst\u001b[39m messageLocator \u001b[33m=\u001b[39m loginPage\u001b[33m.\u001b[39mlocator(\u001b[32m'.success-message, .error-message'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 105 |\u001b[39m         \u001b[36mawait\u001b[39m expect(messageLocator)\u001b[33m.\u001b[39mtoHaveText(expected\u001b[33m.\u001b[39mmessage)\u001b[33m;\u001b[39m\n \u001b[90m 106 |\u001b[39m       }\n \u001b[90m 107 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:104:42\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-05T03:30:14.629Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-131a5-s-TC-002---ไม่กรอก-username-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-131a5-s-TC-002---ไม่กรอก-username-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                        "column": 42,
+                        "line": 104
+                      }
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-29T03:55:05.360Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-ข้อมูลส่วนตัว-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-Click-menu-ข้อมูลของท่าน-ข้อมูลส่วนตัว-chromium\\trace.zip"
-                    }
-                  ]
+                  "status": "unexpected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "217198a80e852077fe39-a601d3c2ccf7fb5a6699",
-          "file": "menu.spec.js",
-          "line": 107,
-          "column": 25
-        },
-        {
-          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอลางาน",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "31be70adcd52654ff551-95dc1124163de7462d56",
+              "file": "test.spec.js",
+              "line": 18,
+              "column": 9
+            },
             {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "TC_003 - ไม่กรอก password",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 12542,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 1000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "text": "link_url -->  /profile/documents/time-leave\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/time-leave\n"
+                      "workerIndex": 2,
+                      "status": "interrupted",
+                      "duration": 94610,
+                      "error": {
+                        "message": "Error: page.waitForSelector: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('#mat-error-4') to be visible\u001b[22m\n",
+                        "stack": "Error: page.waitForSelector: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('#mat-error-4') to be visible\u001b[22m\n\n    at LoginPage.locateAlertPassword (D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\pages\\login.page.js:115:25)\n    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:47:34",
+                        "location": {
+                          "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\pages\\login.page.js",
+                          "column": 25,
+                          "line": 115
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\login.page.js:115\n\n\u001b[0m \u001b[90m 113 |\u001b[39m    \n \u001b[90m 114 |\u001b[39m     \u001b[36masync\u001b[39m locateAlertPassword () {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 115 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocatorAlertPassword)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 116 |\u001b[39m         \u001b[36mreturn\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocatorAlertPassword)\u001b[33m;\u001b[39m\n \u001b[90m 117 |\u001b[39m     }\u001b[33m;\u001b[39m\n \u001b[90m 118 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\pages\\login.page.js",
+                            "column": 25,
+                            "line": 115
+                          },
+                          "message": "Error: page.waitForSelector: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('#mat-error-4') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\login.page.js:115\n\n\u001b[0m \u001b[90m 113 |\u001b[39m    \n \u001b[90m 114 |\u001b[39m     \u001b[36masync\u001b[39m locateAlertPassword () {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 115 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocatorAlertPassword)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 116 |\u001b[39m         \u001b[36mreturn\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocatorAlertPassword)\u001b[33m;\u001b[39m\n \u001b[90m 117 |\u001b[39m     }\u001b[33m;\u001b[39m\n \u001b[90m 118 |\u001b[39m\u001b[0m\n\u001b[2m    at LoginPage.locateAlertPassword (D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\pages\\login.page.js:115:25)\u001b[22m\n\u001b[2m    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:47:34\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-05T03:30:14.636Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-d8cda-s-TC-003---ไม่กรอก-password-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-d8cda-s-TC-003---ไม่กรอก-password-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\pages\\login.page.js",
+                        "column": 25,
+                        "line": 115
+                      }
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-29T03:55:20.961Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-ข้อมูลของท่าน-ยื่อเอกสาร-ขอลางาน-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-ข้อมูลของท่าน-ยื่อเอกสาร-ขอลางาน-chromium\\trace.zip"
-                    }
-                  ]
+                  "status": "skipped"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "217198a80e852077fe39-28380b9824ba119786f6",
-          "file": "menu.spec.js",
-          "line": 96,
-          "column": 29
-        },
-        {
-          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอโอที",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "31be70adcd52654ff551-b48556a4d766f422c4a6",
+              "file": "test.spec.js",
+              "line": 18,
+              "column": 9
+            },
             {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "TC_004 - กรอกข้อมูลผิดพลาด",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 13256,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 1000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "text": "link_url -->  /profile/documents/ot\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/ot\n"
+                      "workerIndex": 3,
+                      "status": "interrupted",
+                      "duration": 95015,
+                      "error": {
+                        "message": "Error: page.waitForURL: Test ended.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+                        "stack": "Error: page.waitForURL: Test ended.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at LoginPage.getWelcomeUrl (D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\pages\\login.page.js:315:25)\n    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:56:11",
+                        "location": {
+                          "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\pages\\login.page.js",
+                          "column": 25,
+                          "line": 315
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\login.page.js:315\n\n\u001b[0m \u001b[90m 313 |\u001b[39m         \u001b[36mconst\u001b[39m currentUrl \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39murl()\u001b[33m;\u001b[39m  \u001b[90m// ดึง current URL เป็น string\u001b[39m\n \u001b[90m 314 |\u001b[39m         \u001b[90m// รอให้ URL เปลี่ยนแปลงและมีคำว่า \"welcome\"\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 315 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForURL(url \u001b[33m=>\u001b[39m \u001b[35m/welcome/\u001b[39m\u001b[33m.\u001b[39mtest(url\u001b[33m.\u001b[39mhref) \u001b[33m&&\u001b[39m url\u001b[33m.\u001b[39mhref \u001b[33m!==\u001b[39m currentUrl)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 316 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m \n \u001b[90m 317 |\u001b[39m         \u001b[36mconst\u001b[39m newUrl \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39murl()\u001b[33m;\u001b[39m \n \u001b[90m 318 |\u001b[39m         \u001b[36mreturn\u001b[39m newUrl\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\pages\\login.page.js",
+                            "column": 25,
+                            "line": 315
+                          },
+                          "message": "Error: page.waitForURL: Test ended.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39m..\\pages\\login.page.js:315\n\n\u001b[0m \u001b[90m 313 |\u001b[39m         \u001b[36mconst\u001b[39m currentUrl \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39murl()\u001b[33m;\u001b[39m  \u001b[90m// ดึง current URL เป็น string\u001b[39m\n \u001b[90m 314 |\u001b[39m         \u001b[90m// รอให้ URL เปลี่ยนแปลงและมีคำว่า \"welcome\"\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 315 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForURL(url \u001b[33m=>\u001b[39m \u001b[35m/welcome/\u001b[39m\u001b[33m.\u001b[39mtest(url\u001b[33m.\u001b[39mhref) \u001b[33m&&\u001b[39m url\u001b[33m.\u001b[39mhref \u001b[33m!==\u001b[39m currentUrl)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 316 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m \n \u001b[90m 317 |\u001b[39m         \u001b[36mconst\u001b[39m newUrl \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39murl()\u001b[33m;\u001b[39m \n \u001b[90m 318 |\u001b[39m         \u001b[36mreturn\u001b[39m newUrl\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at LoginPage.getWelcomeUrl (D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\pages\\login.page.js:315:25)\u001b[22m\n\u001b[2m    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:56:11\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-05T03:30:14.623Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-346f4--TC-004---กรอกข้อมูลผิดพลาด-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-346f4--TC-004---กรอกข้อมูลผิดพลาด-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\pages\\login.page.js",
+                        "column": 25,
+                        "line": 315
+                      }
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-29T03:55:34.113Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-ข้อมูลของท่าน-ยื่อเอกสาร-ขอโอที-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-ข้อมูลของท่าน-ยื่อเอกสาร-ขอโอที-chromium\\trace.zip"
-                    }
-                  ]
+                  "status": "skipped"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "217198a80e852077fe39-81824bb5be103d4d6410",
-          "file": "menu.spec.js",
-          "line": 96,
-          "column": 29
-        },
-        {
-          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอเพิ่มเวลา",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "31be70adcd52654ff551-c95ae974abc371bd3dff",
+              "file": "test.spec.js",
+              "line": 18,
+              "column": 9
+            },
             {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "TC_005 - เข้าสู่ระบบสำเร็จ",
+              "ok": false,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 12254,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 1000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "text": "link_url -->  /profile/documents/time-adjust\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/time-adjust\n"
+                      "workerIndex": 4,
+                      "status": "failed",
+                      "duration": 8304,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"https://hms.humansoft.co.th/\u001b[7mauth/login\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"https://hms.humansoft.co.th/\u001b[7mwelcome\u001b[27m\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"https://hms.humansoft.co.th/\u001b[7mauth/login\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"https://hms.humansoft.co.th/\u001b[7mwelcome\u001b[27m\"\u001b[39m\n    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:57:46",
+                        "matcherResult": {
+                          "actual": "https://hms.humansoft.co.th/welcome",
+                          "expected": "https://hms.humansoft.co.th/auth/login",
+                          "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"https://hms.humansoft.co.th/\u001b[7mauth/login\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"https://hms.humansoft.co.th/\u001b[7mwelcome\u001b[27m\"\u001b[39m",
+                          "name": "toBe",
+                          "pass": false
+                        },
+                        "location": {
+                          "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                          "column": 46,
+                          "line": 57
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 55 |\u001b[39m           \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickLogin()\u001b[33m;\u001b[39m\n \u001b[90m 56 |\u001b[39m           \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mgetWelcomeUrl()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m           expect(\u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39mtoBe(url)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m\n \u001b[90m 59 |\u001b[39m           \u001b[36mconst\u001b[39m loginFailModal \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mlocateLoginFailModal()\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m           \u001b[90m// console.log('loginFailModal -->', loginFailModal);\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                            "column": 46,
+                            "line": 57
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"https://hms.humansoft.co.th/\u001b[7mauth/login\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"https://hms.humansoft.co.th/\u001b[7mwelcome\u001b[27m\"\u001b[39m\n\n\u001b[0m \u001b[90m 55 |\u001b[39m           \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickLogin()\u001b[33m;\u001b[39m\n \u001b[90m 56 |\u001b[39m           \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mgetWelcomeUrl()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m           expect(\u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39mtoBe(url)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m\n \u001b[90m 59 |\u001b[39m           \u001b[36mconst\u001b[39m loginFailModal \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mlocateLoginFailModal()\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m           \u001b[90m// console.log('loginFailModal -->', loginFailModal);\u001b[39m\u001b[0m\n\u001b[2m    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:57:46\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-05T03:30:22.478Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-a2c44--TC-005---เข้าสู่ระบบสำเร็จ-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-a2c44--TC-005---เข้าสู่ระบบสำเร็จ-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                        "column": 46,
+                        "line": 57
+                      }
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-29T03:55:47.932Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-79a3f-ท่าน-ยื่อเอกสาร-ขอเพิ่มเวลา-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-79a3f-ท่าน-ยื่อเอกสาร-ขอเพิ่มเวลา-chromium\\trace.zip"
-                    }
-                  ]
+                  "status": "unexpected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "217198a80e852077fe39-44c5a41b650c75ee1a88",
-          "file": "menu.spec.js",
-          "line": 96,
-          "column": 29
-        },
-        {
-          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอเปลี่ยนกะการทำงาน",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "31be70adcd52654ff551-372283fadfb8b76e14d3",
+              "file": "test.spec.js",
+              "line": 18,
+              "column": 9
+            },
             {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "TC_007 - คลิกปุ่มลืมรหัสผ่าน",
+              "ok": false,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 12441,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 1000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "text": "link_url -->  /profile/documents/work-cycle\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/work-cycle\n"
+                      "workerIndex": 5,
+                      "status": "failed",
+                      "duration": 3342,
+                      "error": {
+                        "message": "TypeError: loginPage.click is not a function",
+                        "stack": "TypeError: loginPage.click is not a function\n    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:74:25",
+                        "location": {
+                          "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                          "column": 25,
+                          "line": 74
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 72 |\u001b[39m       \u001b[90m// เคสกดปุ่ม \"Forgot Password\"\u001b[39m\n \u001b[90m 73 |\u001b[39m       \u001b[36mif\u001b[39m (action \u001b[33m===\u001b[39m \u001b[32m\"clickForgotPassword\"\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclick(\u001b[32m'#forgot-password'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m         \u001b[36mconst\u001b[39m modal \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39misVisible(\u001b[32m'#reset-password-modal'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 76 |\u001b[39m         expect(modal)\u001b[33m.\u001b[39mtoBe(expected\u001b[33m.\u001b[39mmodalVisible)\u001b[33m;\u001b[39m\n \u001b[90m 77 |\u001b[39m       }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                            "column": 25,
+                            "line": 74
+                          },
+                          "message": "TypeError: loginPage.click is not a function\n\n\u001b[0m \u001b[90m 72 |\u001b[39m       \u001b[90m// เคสกดปุ่ม \"Forgot Password\"\u001b[39m\n \u001b[90m 73 |\u001b[39m       \u001b[36mif\u001b[39m (action \u001b[33m===\u001b[39m \u001b[32m\"clickForgotPassword\"\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclick(\u001b[32m'#forgot-password'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m         \u001b[36mconst\u001b[39m modal \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39misVisible(\u001b[32m'#reset-password-modal'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 76 |\u001b[39m         expect(modal)\u001b[33m.\u001b[39mtoBe(expected\u001b[33m.\u001b[39mmodalVisible)\u001b[33m;\u001b[39m\n \u001b[90m 77 |\u001b[39m       }\u001b[0m\n\u001b[2m    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:74:25\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-05T03:30:23.199Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-cb380-C-007---คลิกปุ่มลืมรหัสผ่าน-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-cb380-C-007---คลิกปุ่มลืมรหัสผ่าน-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                        "column": 25,
+                        "line": 74
+                      }
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-29T03:56:00.778Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-72fbd-อเอกสาร-ขอเปลี่ยนกะการทำงาน-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-72fbd-อเอกสาร-ขอเปลี่ยนกะการทำงาน-chromium\\trace.zip"
-                    }
-                  ]
+                  "status": "unexpected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "217198a80e852077fe39-378cfb1f5d1c9915addb",
-          "file": "menu.spec.js",
-          "line": 96,
-          "column": 29
-        },
-        {
-          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอเปลี่ยนวันหยุด",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "31be70adcd52654ff551-758b9141bdd8cfef4883",
+              "file": "test.spec.js",
+              "line": 18,
+              "column": 9
+            },
             {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "TC_008 - ไม่กรอกชื่อผู้ใช้ใน Reset Password",
+              "ok": false,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 17278,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 1000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "text": "link_url -->  /profile/documents/holiday\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/holiday\n"
+                      "workerIndex": 6,
+                      "status": "failed",
+                      "duration": 2838,
+                      "error": {
+                        "message": "TypeError: loginPage.fill is not a function",
+                        "stack": "TypeError: loginPage.fill is not a function\n    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:81:25",
+                        "location": {
+                          "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                          "column": 25,
+                          "line": 81
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 79 |\u001b[39m       \u001b[90m// // เคส Reset Password\u001b[39m\n \u001b[90m 80 |\u001b[39m       \u001b[36mif\u001b[39m (resetPassword) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 81 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mfill(\u001b[32m'#res et-username'\u001b[39m\u001b[33m,\u001b[39m resetPassword\u001b[33m.\u001b[39musername)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 82 |\u001b[39m         \u001b[36mif\u001b[39m (resetPassword\u001b[33m.\u001b[39mmethod \u001b[33m===\u001b[39m \u001b[32m\"email\"\u001b[39m) {\n \u001b[90m 83 |\u001b[39m           \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mcheck(\u001b[32m'#select-email'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m         } \u001b[36melse\u001b[39m \u001b[36mif\u001b[39m (resetPassword\u001b[33m.\u001b[39mmethod \u001b[33m===\u001b[39m \u001b[32m\"phone\"\u001b[39m) {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                            "column": 25,
+                            "line": 81
+                          },
+                          "message": "TypeError: loginPage.fill is not a function\n\n\u001b[0m \u001b[90m 79 |\u001b[39m       \u001b[90m// // เคส Reset Password\u001b[39m\n \u001b[90m 80 |\u001b[39m       \u001b[36mif\u001b[39m (resetPassword) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 81 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mfill(\u001b[32m'#res et-username'\u001b[39m\u001b[33m,\u001b[39m resetPassword\u001b[33m.\u001b[39musername)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 82 |\u001b[39m         \u001b[36mif\u001b[39m (resetPassword\u001b[33m.\u001b[39mmethod \u001b[33m===\u001b[39m \u001b[32m\"email\"\u001b[39m) {\n \u001b[90m 83 |\u001b[39m           \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mcheck(\u001b[32m'#select-email'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m         } \u001b[36melse\u001b[39m \u001b[36mif\u001b[39m (resetPassword\u001b[33m.\u001b[39mmethod \u001b[33m===\u001b[39m \u001b[32m\"phone\"\u001b[39m) {\u001b[0m\n\u001b[2m    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:81:25\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-05T03:30:27.666Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-979bd-ชื่อผู้ใช้ใน-Reset-Password-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-979bd-ชื่อผู้ใช้ใน-Reset-Password-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                        "column": 25,
+                        "line": 81
+                      }
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-29T03:56:13.808Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-7b16b-ยื่อเอกสาร-ขอเปลี่ยนวันหยุด-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-7b16b-ยื่อเอกสาร-ขอเปลี่ยนวันหยุด-chromium\\trace.zip"
-                    }
-                  ]
+                  "status": "unexpected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "217198a80e852077fe39-c6d192b81a8e58d24a76",
-          "file": "menu.spec.js",
-          "line": 96,
-          "column": 29
-        },
-        {
-          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอเบิกล่วงหน้า",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "31be70adcd52654ff551-5d6db234738c15a83340",
+              "file": "test.spec.js",
+              "line": 18,
+              "column": 9
+            },
             {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "TC_011 - Reset Password สำเร็จ (Email)",
+              "ok": false,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 12908,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 1000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "text": "link_url -->  /profile/documents/withdraw\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/withdraw\n"
+                      "workerIndex": 7,
+                      "status": "failed",
+                      "duration": 3283,
+                      "error": {
+                        "message": "TypeError: loginPage.fill is not a function",
+                        "stack": "TypeError: loginPage.fill is not a function\n    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:81:25",
+                        "location": {
+                          "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                          "column": 25,
+                          "line": 81
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 79 |\u001b[39m       \u001b[90m// // เคส Reset Password\u001b[39m\n \u001b[90m 80 |\u001b[39m       \u001b[36mif\u001b[39m (resetPassword) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 81 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mfill(\u001b[32m'#res et-username'\u001b[39m\u001b[33m,\u001b[39m resetPassword\u001b[33m.\u001b[39musername)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 82 |\u001b[39m         \u001b[36mif\u001b[39m (resetPassword\u001b[33m.\u001b[39mmethod \u001b[33m===\u001b[39m \u001b[32m\"email\"\u001b[39m) {\n \u001b[90m 83 |\u001b[39m           \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mcheck(\u001b[32m'#select-email'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m         } \u001b[36melse\u001b[39m \u001b[36mif\u001b[39m (resetPassword\u001b[33m.\u001b[39mmethod \u001b[33m===\u001b[39m \u001b[32m\"phone\"\u001b[39m) {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                            "column": 25,
+                            "line": 81
+                          },
+                          "message": "TypeError: loginPage.fill is not a function\n\n\u001b[0m \u001b[90m 79 |\u001b[39m       \u001b[90m// // เคส Reset Password\u001b[39m\n \u001b[90m 80 |\u001b[39m       \u001b[36mif\u001b[39m (resetPassword) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 81 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mfill(\u001b[32m'#res et-username'\u001b[39m\u001b[33m,\u001b[39m resetPassword\u001b[33m.\u001b[39musername)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 82 |\u001b[39m         \u001b[36mif\u001b[39m (resetPassword\u001b[33m.\u001b[39mmethod \u001b[33m===\u001b[39m \u001b[32m\"email\"\u001b[39m) {\n \u001b[90m 83 |\u001b[39m           \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mcheck(\u001b[32m'#select-email'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m         } \u001b[36melse\u001b[39m \u001b[36mif\u001b[39m (resetPassword\u001b[33m.\u001b[39mmethod \u001b[33m===\u001b[39m \u001b[32m\"phone\"\u001b[39m) {\u001b[0m\n\u001b[2m    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:81:25\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-05T03:30:31.742Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-e5386-eset-Password-สำเร็จ-Email--chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-e5386-eset-Password-สำเร็จ-Email--chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                        "column": 25,
+                        "line": 81
+                      }
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-29T03:56:31.707Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-89a7e-น-ยื่อเอกสาร-ขอเบิกล่วงหน้า-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-89a7e-น-ยื่อเอกสาร-ขอเบิกล่วงหน้า-chromium\\trace.zip"
-                    }
-                  ]
+                  "status": "unexpected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "217198a80e852077fe39-83dc3333364da9fd2e44",
-          "file": "menu.spec.js",
-          "line": 96,
-          "column": 29
-        },
-        {
-          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอลาออก",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "31be70adcd52654ff551-0d7652bb5a15fb056569",
+              "file": "test.spec.js",
+              "line": 18,
+              "column": 9
+            },
             {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "TC_012 - Reset Password สำเร็จ (Phone)",
+              "ok": false,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 14265,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 1000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "text": "link_url -->  /profile/documents/resign\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/resign\n"
+                      "workerIndex": 8,
+                      "status": "failed",
+                      "duration": 2685,
+                      "error": {
+                        "message": "TypeError: loginPage.fill is not a function",
+                        "stack": "TypeError: loginPage.fill is not a function\n    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:81:25",
+                        "location": {
+                          "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                          "column": 25,
+                          "line": 81
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 79 |\u001b[39m       \u001b[90m// // เคส Reset Password\u001b[39m\n \u001b[90m 80 |\u001b[39m       \u001b[36mif\u001b[39m (resetPassword) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 81 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mfill(\u001b[32m'#res et-username'\u001b[39m\u001b[33m,\u001b[39m resetPassword\u001b[33m.\u001b[39musername)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 82 |\u001b[39m         \u001b[36mif\u001b[39m (resetPassword\u001b[33m.\u001b[39mmethod \u001b[33m===\u001b[39m \u001b[32m\"email\"\u001b[39m) {\n \u001b[90m 83 |\u001b[39m           \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mcheck(\u001b[32m'#select-email'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m         } \u001b[36melse\u001b[39m \u001b[36mif\u001b[39m (resetPassword\u001b[33m.\u001b[39mmethod \u001b[33m===\u001b[39m \u001b[32m\"phone\"\u001b[39m) {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                            "column": 25,
+                            "line": 81
+                          },
+                          "message": "TypeError: loginPage.fill is not a function\n\n\u001b[0m \u001b[90m 79 |\u001b[39m       \u001b[90m// // เคส Reset Password\u001b[39m\n \u001b[90m 80 |\u001b[39m       \u001b[36mif\u001b[39m (resetPassword) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 81 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mfill(\u001b[32m'#res et-username'\u001b[39m\u001b[33m,\u001b[39m resetPassword\u001b[33m.\u001b[39musername)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 82 |\u001b[39m         \u001b[36mif\u001b[39m (resetPassword\u001b[33m.\u001b[39mmethod \u001b[33m===\u001b[39m \u001b[32m\"email\"\u001b[39m) {\n \u001b[90m 83 |\u001b[39m           \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mcheck(\u001b[32m'#select-email'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m         } \u001b[36melse\u001b[39m \u001b[36mif\u001b[39m (resetPassword\u001b[33m.\u001b[39mmethod \u001b[33m===\u001b[39m \u001b[32m\"phone\"\u001b[39m) {\u001b[0m\n\u001b[2m    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:81:25\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-05T03:30:32.484Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-49765-eset-Password-สำเร็จ-Phone--chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-49765-eset-Password-สำเร็จ-Phone--chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                        "column": 25,
+                        "line": 81
+                      }
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-29T03:56:45.165Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-ข้อมูลของท่าน-ยื่อเอกสาร-ขอลาออก-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-ข้อมูลของท่าน-ยื่อเอกสาร-ขอลาออก-chromium\\trace.zip"
-                    }
-                  ]
+                  "status": "unexpected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "217198a80e852077fe39-7583b4ed96a99ab6f3bd",
-          "file": "menu.spec.js",
-          "line": 96,
-          "column": 29
-        },
-        {
-          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอเอกสารรับรองเงินเดือน",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "31be70adcd52654ff551-275ab5903487e732015d",
+              "file": "test.spec.js",
+              "line": 18,
+              "column": 9
+            },
             {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "TC_013 - ไม่กรอก OTP",
+              "ok": false,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "interrupted",
-                  "duration": 22236,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 1000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "text": "link_url -->  /profile/documents/salary-doc\n"
-                    },
-                    {
-                      "text": "newUrl -->  https://hms.humansoft.co.th/profile/documents/salary-doc\n"
+                      "workerIndex": 9,
+                      "status": "failed",
+                      "duration": 2909,
+                      "error": {
+                        "message": "TypeError: loginPage.fill is not a function",
+                        "stack": "TypeError: loginPage.fill is not a function\n    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:92:25",
+                        "location": {
+                          "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                          "column": 25,
+                          "line": 92
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 90 |\u001b[39m       \u001b[90m// เคส OTP\u001b[39m\n \u001b[90m 91 |\u001b[39m       \u001b[36mif\u001b[39m (otp \u001b[33m!==\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 92 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mfill(\u001b[32m'#otp-input'\u001b[39m\u001b[33m,\u001b[39m otp)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 93 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclick(\u001b[32m'#confirm-otp'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 94 |\u001b[39m       }\n \u001b[90m 95 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                            "column": 25,
+                            "line": 92
+                          },
+                          "message": "TypeError: loginPage.fill is not a function\n\n\u001b[0m \u001b[90m 90 |\u001b[39m       \u001b[90m// เคส OTP\u001b[39m\n \u001b[90m 91 |\u001b[39m       \u001b[36mif\u001b[39m (otp \u001b[33m!==\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 92 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mfill(\u001b[32m'#otp-input'\u001b[39m\u001b[33m,\u001b[39m otp)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 93 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclick(\u001b[32m'#confirm-otp'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 94 |\u001b[39m       }\n \u001b[90m 95 |\u001b[39m\u001b[0m\n\u001b[2m    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:92:25\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-05T03:30:36.157Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Password-Tests-TC-013---ไม่กรอก-OTP-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Password-Tests-TC-013---ไม่กรอก-OTP-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                        "column": 25,
+                        "line": 92
+                      }
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-29T03:56:59.988Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-15922-สาร-ขอเอกสารรับรองเงินเดือน-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\menu-TC-001-001-Click-menu-15922-สาร-ขอเอกสารรับรองเงินเดือน-chromium\\trace.zip"
-                    }
-                  ]
+                  "status": "unexpected"
                 }
               ],
-              "status": "skipped"
-            }
-          ],
-          "id": "217198a80e852077fe39-e733b08fca61f4043414",
-          "file": "menu.spec.js",
-          "line": 96,
-          "column": 29
-        },
-        {
-          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอเอกสารรับรองการทำงาน",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "31be70adcd52654ff551-d13fd6bb9b0a5d19051e",
+              "file": "test.spec.js",
+              "line": 18,
+              "column": 9
+            },
             {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [],
-              "status": "skipped"
+              "title": "TC_014 - คลิกปุ่ม Manage Company",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 1000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "status": "failed",
+                      "duration": 2805,
+                      "error": {
+                        "message": "TypeError: loginPage.click is not a function",
+                        "stack": "TypeError: loginPage.click is not a function\n    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:98:25",
+                        "location": {
+                          "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                          "column": 25,
+                          "line": 98
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  96 |\u001b[39m       \u001b[90m// เคสกดปุ่ม \"Manage Company\"\u001b[39m\n \u001b[90m  97 |\u001b[39m       \u001b[36mif\u001b[39m (action \u001b[33m===\u001b[39m \u001b[32m\"clickManageCompany\"\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  98 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclick(\u001b[32m'#manage-company-button'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  99 |\u001b[39m         \u001b[36mawait\u001b[39m expect(loginPage)\u001b[33m.\u001b[39mtoHaveURL(expected\u001b[33m.\u001b[39mnavigate)\u001b[33m;\u001b[39m\n \u001b[90m 100 |\u001b[39m       }\n \u001b[90m 101 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                            "column": 25,
+                            "line": 98
+                          },
+                          "message": "TypeError: loginPage.click is not a function\n\n\u001b[0m \u001b[90m  96 |\u001b[39m       \u001b[90m// เคสกดปุ่ม \"Manage Company\"\u001b[39m\n \u001b[90m  97 |\u001b[39m       \u001b[36mif\u001b[39m (action \u001b[33m===\u001b[39m \u001b[32m\"clickManageCompany\"\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  98 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclick(\u001b[32m'#manage-company-button'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  99 |\u001b[39m         \u001b[36mawait\u001b[39m expect(loginPage)\u001b[33m.\u001b[39mtoHaveURL(expected\u001b[33m.\u001b[39mnavigate)\u001b[33m;\u001b[39m\n \u001b[90m 100 |\u001b[39m       }\n \u001b[90m 101 |\u001b[39m\u001b[0m\n\u001b[2m    at D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js:98:25\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-05T03:30:36.269Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-05b97-4---คลิกปุ่ม-Manage-Company-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\HumanSoftAutomateTest\\test-script-playwright\\test-results\\test-Login-and-Reset-Passw-05b97-4---คลิกปุ่ม-Manage-Company-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\HumanSoftAutomateTest\\test-script-playwright\\src\\tests\\test.spec.js",
+                        "column": 25,
+                        "line": 98
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "31be70adcd52654ff551-2f2dbb3876375e7d3041",
+              "file": "test.spec.js",
+              "line": 18,
+              "column": 9
             }
-          ],
-          "id": "217198a80e852077fe39-84791d6cc3fff7dd999a",
-          "file": "menu.spec.js",
-          "line": 96,
-          "column": 29
-        },
-        {
-          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ยื่อเอกสาร/ขอเอกสารรับรองการขอวีซ่า",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [],
-              "status": "skipped"
-            }
-          ],
-          "id": "217198a80e852077fe39-a23885f9667d13b240f0",
-          "file": "menu.spec.js",
-          "line": 96,
-          "column": 29
-        },
-        {
-          "title": "TC_001 Click menu ข้อมูลของท่าน/ข้อมูลคำนวณเงิน",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [],
-              "status": "skipped"
-            }
-          ],
-          "id": "217198a80e852077fe39-a9cb6a7e6021fcb72585",
-          "file": "menu.spec.js",
-          "line": 107,
-          "column": 25
-        },
-        {
-          "title": "TC_001 Click menu ข้อมูลของท่าน/สลิปเงินเดือน",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [],
-              "status": "skipped"
-            }
-          ],
-          "id": "217198a80e852077fe39-0b7c496ac125a74f4e8f",
-          "file": "menu.spec.js",
-          "line": 107,
-          "column": 25
-        },
-        {
-          "title": "TC_001 Click menu ข้อมูลของท่าน/Todo-Lists",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [],
-              "status": "skipped"
-            }
-          ],
-          "id": "217198a80e852077fe39-7d0054febae8d9ca772f",
-          "file": "menu.spec.js",
-          "line": 107,
-          "column": 25
-        },
-        {
-          "title": "TC_001 Click menu ข้อมูลของท่าน/วางแผนกะการทำงาน - วันหยุด",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [],
-              "status": "skipped"
-            }
-          ],
-          "id": "217198a80e852077fe39-e244c2dbbda73d121529",
-          "file": "menu.spec.js",
-          "line": 107,
-          "column": 25
-        },
-        {
-          "title": "TC_001 Click menu ข้อมูลของท่าน/นโยบายบริษัท",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [],
-              "status": "skipped"
-            }
-          ],
-          "id": "217198a80e852077fe39-f0b0233de8eba3f69e7f",
-          "file": "menu.spec.js",
-          "line": 107,
-          "column": 25
-        },
-        {
-          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ตอบแบบประเมิน/ตอบแบบประเมินพนักงานทั่วไป",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [],
-              "status": "skipped"
-            }
-          ],
-          "id": "217198a80e852077fe39-cd7d35aef673106415d4",
-          "file": "menu.spec.js",
-          "line": 96,
-          "column": 29
-        },
-        {
-          "title": "TC_001_001: Click menu ข้อมูลของท่าน/ตอบแบบประเมิน/ตอบแบบประเมินพนักงานทดลอง",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [],
-              "status": "skipped"
-            }
-          ],
-          "id": "217198a80e852077fe39-893c5bc70ee210e9feb2",
-          "file": "menu.spec.js",
-          "line": 96,
-          "column": 29
-        },
-        {
-          "title": "TC_001_001: Click menu ข้อมูลของท่าน/แหล่งเรียนรู้/E-library (Beta)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [],
-              "status": "skipped"
-            }
-          ],
-          "id": "217198a80e852077fe39-b8ed19a159655a19b8ce",
-          "file": "menu.spec.js",
-          "line": 96,
-          "column": 29
-        },
-        {
-          "title": "TC_001_001: Click menu ข้อมูลของท่าน/แหล่งเรียนรู้/E-learning (Beta)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 1000000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [],
-              "status": "skipped"
-            }
-          ],
-          "id": "217198a80e852077fe39-835e3683d3d27f7ea286",
-          "file": "menu.spec.js",
-          "line": 96,
-          "column": 29
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-29T03:54:50.480Z",
-    "duration": 152637.39800000002,
-    "expected": 9,
-    "skipped": 12,
-    "unexpected": 0,
+    "startTime": "2025-02-05T03:30:14.072Z",
+    "duration": 97285.624,
+    "expected": 0,
+    "skipped": 2,
+    "unexpected": 9,
     "flaky": 0
   }
 }
